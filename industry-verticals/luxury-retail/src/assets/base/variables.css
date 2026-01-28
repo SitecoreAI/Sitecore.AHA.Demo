@@ -1,17 +1,17 @@
 @theme {
-  --color-foreground: #2c2621;
-  --color-foreground-light: #948685;
+  --color-foreground: #000000;
+  --color-foreground-light: #636466;
 
-  --color-background: #fbfaf9;
-  --color-background-accent: #f9eee6;
-  --color-background-muted: #f5f2f1;
+  --color-background: #ffffff;
+  --color-background-accent: #f5f5f5;
+  --color-background-muted: #f9f9f9;
 
-  --color-accent: #846854;
+  --color-accent: #C10E0E;
 
   --color-success: #2ec1ac;
-  --color-danger: #e97171;
+  --color-danger: #C10E0E;
 
-  --color-border: #846854;
+  --color-border: #636466;
 
   --font-heading: 'Libre Baskerville', serif;
   --font-body: 'Poppins', sans-serif;
