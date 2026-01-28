@@ -51,3 +51,6 @@ packages/
 
 # Ignore all TS incremental build files
 *.tsbuildinfo
+
+# Cursor instructions
+./cursor/
