@@ -6,7 +6,7 @@ import { ProductCard } from '@/components/non-sitecore/ProductCard';
 import { Category, Product, ProductIGQL } from '@/types/products';
 import { useI18n } from 'next-localization';
 
-interface ProductCategoryPage {
+interface LandingPage {
   id: string;
   name: string;
   children: {
@@ -20,7 +20,7 @@ interface ProductListingProps extends ComponentProps {
     data: {
       contextItem: {
         children: {
-          results: ProductCategoryPage[] | ProductIGQL[];
+          results: LandingPage[] | ProductIGQL[];
         };
       };
     };
@@ -36,7 +36,7 @@ export const Default = (props: ProductListingProps) => {
   const unformattedProducts = items
     .filter((item) => Object.keys(item).length !== 0)
     .flatMap((item) => {
-      // Check if the item has children property (ProductCategoryPage)
+      // Check if the item has children property (LandingPage)
       if ('children' in item && item.children?.results) {
         return item.children.results;
       } else {

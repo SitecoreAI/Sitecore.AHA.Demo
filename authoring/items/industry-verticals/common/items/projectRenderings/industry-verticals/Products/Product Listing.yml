@@ -20,7 +20,7 @@ SharedFields:
       contextItem: item(path: $contextItem, language: $language) {
         children(first: 50) {
           results {
-            ... on ProductCategoryPage {
+            ... on LandingPage {
               id
               name
               children(first: 200) {

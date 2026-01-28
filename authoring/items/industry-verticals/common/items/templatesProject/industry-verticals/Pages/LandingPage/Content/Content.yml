@@ -1,15 +1,18 @@
-﻿---
-ID: "07e9649a-05be-4ccc-af81-b725dbf14fe4"
-Parent: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: "/sitecore/templates/Project/industry-verticals/Pages/ProductCategoryPage/Metadata"
+---
+ID: "a61f63f2-f95d-4adb-a7ea-e4b9960df972"
+Parent: "398f0569-c5f8-4535-bc19-5bc3881d188c"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: "/sitecore/templates/Project/industry-verticals/Pages/LandingPage/Content/Content"
 SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Rich Text
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 201
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "613b9df9-3dde-4ea1-944d-7f25e314f169"
+  Value: "f5a8ed24-42f8-4329-b00d-648d45ad0a39"
 Languages:
 - Language: en
   Versions:
@@ -17,18 +20,18 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20251201T112307Z
+      Value: 20251114T113358Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\jeral.sandeeptha@sitecore.com
+        sitecore\neli.kostadinova@sitecore.com
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\jeral.sandeeptha@sitecore.com
+        sitecore\neli.kostadinova@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0ba56e62-0c98-4d5a-89c0-322b0ac4abb1"
+      Value: "9e264c5a-232c-4e81-8c12-35317741ed44"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

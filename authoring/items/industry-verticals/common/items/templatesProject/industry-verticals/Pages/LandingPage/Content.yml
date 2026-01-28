@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "398f0569-c5f8-4535-bc19-5bc3881d188c"
 Parent: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: "/sitecore/templates/Project/industry-verticals/Pages/ProductCategoryPage/Content"
+Path: "/sitecore/templates/Project/industry-verticals/Pages/LandingPage/Content"
 Languages:
 - Language: en
   Versions:
