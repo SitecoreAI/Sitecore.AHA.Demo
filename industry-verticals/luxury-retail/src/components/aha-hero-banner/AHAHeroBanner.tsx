@@ -42,8 +42,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
   const isPageEditing = page.mode.isEditing;
   const { styles, RenderingIdentifier: id } = params;
 
-  const showButton2 =
-    Boolean(fields?.Button2?.value?.text?.trim()) || isPageEditing;
+  const showButton2 = Boolean(fields?.Button2?.value?.text?.trim()) || isPageEditing;
 
   if (!fields) {
     return isPageEditing ? (
@@ -51,9 +50,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
         className={`component aha-hero-banner min-h-[32rem] bg-[#C10E0E] ${styles || ''}`}
         id={id}
       >
-        <div className="container flex min-h-[32rem] items-center py-12">
-          [AHA HERO BANNER]
-        </div>
+        <div className="container flex min-h-[32rem] items-center py-12">[AHA HERO BANNER]</div>
       </section>
     ) : (
       <></>
@@ -76,11 +73,11 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
             </span>
           </div>
 
-          <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight lg:text-5xl xl:text-6xl">
+          <h1 className="font-heading text-3xl leading-tight font-bold tracking-tight lg:text-5xl xl:text-6xl">
             <ContentSdkText field={fields.Title} />
           </h1>
 
-          <div className="font-body text-base font-normal leading-relaxed text-white lg:text-lg [&_.ck-content]:text-white [&_.ck-content_a]:text-white [&_.ck-content_a]:underline [&_.ck-content_p]:mb-3">
+          <div className="font-body text-base leading-relaxed font-normal text-white lg:text-lg [&_.ck-content]:text-white [&_.ck-content_a]:text-white [&_.ck-content_a]:underline [&_.ck-content_p]:mb-3">
             <ContentSdkRichText field={fields.Copy} />
           </div>
 

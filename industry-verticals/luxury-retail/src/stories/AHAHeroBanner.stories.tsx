@@ -1,11 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Default as AHAHeroBanner } from '../components/aha-hero-banner/AHAHeroBanner';
 import { CommonParams, CommonRendering } from './common/commonData';
-import {
-  createImageField,
-  createLinkField,
-  createTextField,
-} from './helpers/createFields';
+import { createImageField, createLinkField, createTextField } from './helpers/createFields';
 
 const meta = {
   title: 'Page Content/AHA Hero Banner',
@@ -32,10 +28,7 @@ const createAHAHeroBannerFields = (options?: { withButton2?: boolean }) => ({
     value: `<div class="ck-content"><p>Give by February 6 for 3X impact and join a nation supporting women's heart health.</p></div>`,
   },
   Button1: createLinkField('Donate Once'),
-  Button2:
-    options?.withButton2 !== false
-      ? createLinkField('Donate Monthly')
-      : createLinkField(''),
+  Button2: options?.withButton2 !== false ? createLinkField('Donate Monthly') : createLinkField(''),
   Image: createImageField('placeholder'),
 });
 
