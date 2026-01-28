@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "613a3675-953d-4ad1-877a-48d24a28977d"
 Parent: "7db68aba-1f10-4703-bb6c-010fc22e038c"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -25,7 +25,7 @@ SharedFields:
               name
               children(first: 200) {
                 results {
-                  ... on ProductPage {
+                  ... on HealthyLivingPage {
                     id
                     url {
                       path
@@ -59,7 +59,7 @@ SharedFields:
               }
             }
     
-            ... on ProductPage {
+            ... on HealthyLivingPage {
               id
               url {
                 path
