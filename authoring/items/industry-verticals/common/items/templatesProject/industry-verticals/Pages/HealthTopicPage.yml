@@ -1,8 +1,8 @@
-﻿---
+---
 ID: "412bf445-b1a6-4aff-8054-0b21a1febc47"
 Parent: "768648c5-cbd8-45e6-ba18-7282b6ce2894"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: "/sitecore/templates/Project/industry-verticals/Pages/ArticlePage"
+Path: "/sitecore/templates/Project/industry-verticals/Pages/HealthTopicPage"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

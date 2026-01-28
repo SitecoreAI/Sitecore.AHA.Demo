@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "a6a4a7d3-4017-4996-9264-27b1d3030273"
 Parent: "e00f662d-10e9-4a06-8ee4-72b57a784723"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
@@ -6,7 +6,7 @@ Path: "/sitecore/templates/Project/industry-verticals/Components/Articles/Select
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "query:$site/*[@@name='Home']//*[@@templatename='ArticlePage']"
+  Value: "query:$site/*[@@name='Home']//*[@@templatename='HealthTopicPage']"
 - ID: "24cb32f0-e364-4f37-b400-0f2899097b5b"
   Hint: Enable Shared Language Fallback
   Value: 1

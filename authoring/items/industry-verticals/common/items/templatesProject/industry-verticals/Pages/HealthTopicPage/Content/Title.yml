@@ -1,24 +1,18 @@
-﻿---
-ID: "7f7ef9d5-f278-4bfe-94fb-c4be7894feb5"
+---
+ID: "9c8beb3d-e162-4540-bb7d-9504db078f44"
 Parent: "c28f148f-7e3e-45d1-b2d9-d304a87c44d5"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Project/industry-verticals/Pages/ArticlePage/Content/Image"
+Path: "/sitecore/templates/Project/industry-verticals/Pages/HealthTopicPage/Content/Title"
 SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: "query:$siteMedia"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: Image
+  Value: "Single-Line Text"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 4
-- ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
-  Hint: Shared
   Value: 1
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "3be9c106-4bb0-48e2-a37b-9c7ec66e44ce"
+  Value: "fd7c0be0-9681-45ed-8da6-7afe1f628f90"
 Languages:
 - Language: en
   Versions:
@@ -26,18 +20,18 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20250911T094612Z
+      Value: 20250820T091620Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sanduni.galagoda@sitecore.com
+        sitecore\neli.kostadinova@sitecore.com
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sanduni.galagoda@sitecore.com
+        sitecore\neli.kostadinova@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "220d6427-a9fc-4b46-b4d1-25986e63e744"
+      Value: "3084ade1-e08c-4366-a582-2ca2ad42ef2b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
