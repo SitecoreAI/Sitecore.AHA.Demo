@@ -48,10 +48,16 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
   if (!fields) {
     return isPageEditing ? (
       <section
-        className={`component aha-hero-banner min-h-[32rem] bg-[#C10E0E] ${styles || ''}`}
+        className={`component aha-hero-banner relative overflow-visible bg-white ${styles || ''}`}
         id={id}
       >
-        <div className="container flex min-h-[32rem] items-center py-12">[AHA HERO BANNER]</div>
+        <div
+          className="absolute inset-0 z-0 bg-[#C10E0E] [clip-path:inset(0_0_8rem_0)]"
+          aria-hidden
+        />
+        <div className="relative z-10 container flex min-h-[24rem] items-center pt-[10px] pb-[10px] lg:min-h-[28rem]">
+          [AHA HERO BANNER]
+        </div>
       </section>
     ) : (
       <></>
@@ -60,57 +66,62 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
 
   return (
     <section
-      className={`component aha-hero-banner min-h-[32rem] bg-[#C10E0E] ${styles || ''}`}
+      className={`component aha-hero-banner relative overflow-visible bg-white ${styles || ''}`}
       id={id}
     >
-      <div className="container flex min-h-[32rem] flex-col gap-8 py-12 lg:flex-row lg:items-center lg:gap-12">
-        {/* Left: content (~60%) */}
-        <div className="flex flex-1 flex-col justify-center space-y-6 text-white lg:flex-[6]">
-          {/* Branding: customizable logo or default heart */}
-          <div className="flex items-center gap-2">
-            {fields.Logo && (fields.Logo?.value?.src || isPageEditing) ? (
-              <ContentSdkImage
-                field={fields.Logo}
-                className="size-6 shrink-0 object-contain object-left"
-              />
-            ) : (
-              <HeartIcon className="size-6 shrink-0 text-white" />
-            )}
-            <span className="font-body text-base font-normal text-white">
-              American Heart Association
-            </span>
-          </div>
-
-          <h1 className="font-body text-3xl leading-tight font-medium tracking-tight text-white lg:text-5xl xl:text-6xl">
-            <ContentSdkText field={fields.Title} />
-          </h1>
-
-          <div className="font-body text-base leading-relaxed font-normal text-white lg:text-lg [&_.ck-content]:text-white [&_.ck-content_a]:text-white [&_.ck-content_a]:underline [&_.ck-content_p]:mb-3">
-            <ContentSdkRichText field={fields.Copy} />
-          </div>
-
-          <div className="flex flex-wrap gap-4">
-            {(fields.Button1?.value?.href || isPageEditing) && (
-              <Link
-                field={fields.Button1}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90"
-              />
-            )}
-            {showButton2 && (fields.Button2?.value?.href || isPageEditing) && (
-              <Link
-                field={fields.Button2}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90"
-              />
-            )}
-          </div>
+      {/* Red background: bottom clipped so image extends onto white below */}
+      <div
+        className="absolute inset-0 z-0 bg-[#C10E0E] [clip-path:inset(0_0_8rem_0)]"
+        aria-hidden
+      />
+      <div className="relative z-10 container flex min-h-[24rem] flex-col gap-6 pt-[10px] pb-[10px] lg:min-h-[28rem] lg:gap-8">
+        {/* Branding: full width */}
+        <div className="flex w-full items-center gap-2">
+          {fields.Logo && (fields.Logo?.value?.src || isPageEditing) ? (
+            <ContentSdkImage
+              field={fields.Logo}
+              width={24}
+              height={24}
+              className="size-6 shrink-0 object-contain object-left"
+            />
+          ) : (
+            <HeartIcon className="size-6 shrink-0 text-white" />
+          )}
+          <span className="font-body text-base font-normal text-white">
+            American Heart Association
+          </span>
         </div>
 
-        {/* Right: image with white frame and rounded corners (~40%) */}
-        <div className="relative flex flex-1 justify-end lg:flex-[4]">
-          <div className="bg-white p-2 lg:p-4">
+        {/* Title: full width across entire component */}
+        <h1 className="font-body w-full text-3xl leading-tight font-medium tracking-tight text-white lg:text-5xl xl:text-6xl">
+          <ContentSdkText field={fields.Title} />
+        </h1>
+
+        {/* Copy, buttons, and image: two columns below title */}
+        <div className="flex flex-1 flex-col gap-8 lg:flex-row lg:gap-12">
+          <div className="flex flex-col space-y-6 text-white lg:flex-[4]">
+            <div className="font-body text-base leading-relaxed font-normal text-white lg:text-lg [&_.ck-content]:text-white [&_.ck-content_a]:text-white [&_.ck-content_a]:underline [&_.ck-content_p]:mb-3">
+              <ContentSdkRichText field={fields.Copy} />
+            </div>
+            <div className="flex flex-wrap gap-4 max-sm:flex-col">
+              {(fields.Button1?.value?.href || isPageEditing) && (
+                <Link
+                  field={fields.Button1}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90 max-sm:w-full sm:w-auto"
+                />
+              )}
+              {showButton2 && (fields.Button2?.value?.href || isPageEditing) && (
+                <Link
+                  field={fields.Button2}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90 max-sm:w-full sm:w-auto"
+                />
+              )}
+            </div>
+          </div>
+          <div className="relative flex flex-1 justify-end lg:flex-[6]">
             <ContentSdkImage
               field={fields.Image}
-              className="max-h-[28rem] w-full rounded-r-lg object-cover object-center lg:max-h-[32rem] lg:rounded-r-xl"
+              className="max-h-[28rem] w-full rounded-lg object-cover object-center lg:max-h-[32rem] lg:rounded-xl"
             />
           </div>
         </div>
