@@ -71,13 +71,33 @@ const SOCIAL_ITEMS: Array<{
   iconKey: keyof FooterFields;
   linkKey: keyof FooterFields;
 }> = [
-  { key: 'facebook', label: 'Facebook', iconKey: 'SocialFacebookIcon', linkKey: 'SocialFacebookLink' },
-  { key: 'instagram', label: 'Instagram', iconKey: 'SocialInstagramIcon', linkKey: 'SocialInstagramLink' },
+  {
+    key: 'facebook',
+    label: 'Facebook',
+    iconKey: 'SocialFacebookIcon',
+    linkKey: 'SocialFacebookLink',
+  },
+  {
+    key: 'instagram',
+    label: 'Instagram',
+    iconKey: 'SocialInstagramIcon',
+    linkKey: 'SocialInstagramLink',
+  },
   { key: 'x', label: 'X', iconKey: 'SocialXIcon', linkKey: 'SocialXLink' },
   { key: 'tiktok', label: 'TikTok', iconKey: 'SocialTikTokIcon', linkKey: 'SocialTikTokLink' },
   { key: 'youtube', label: 'YouTube', iconKey: 'SocialYouTubeIcon', linkKey: 'SocialYouTubeLink' },
-  { key: 'linkedin', label: 'LinkedIn', iconKey: 'SocialLinkedInIcon', linkKey: 'SocialLinkedInLink' },
-  { key: 'pinterest', label: 'Pinterest', iconKey: 'SocialPinterestIcon', linkKey: 'SocialPinterestLink' },
+  {
+    key: 'linkedin',
+    label: 'LinkedIn',
+    iconKey: 'SocialLinkedInIcon',
+    linkKey: 'SocialLinkedInLink',
+  },
+  {
+    key: 'pinterest',
+    label: 'Pinterest',
+    iconKey: 'SocialPinterestIcon',
+    linkKey: 'SocialPinterestLink',
+  },
 ];
 
 const TRUST_BADGES: Array<{
@@ -86,9 +106,24 @@ const TRUST_BADGES: Array<{
   imageKey: keyof FooterFields;
   linkKey: keyof FooterFields;
 }> = [
-  { key: 'bbb', label: 'BBB Accredited Business', imageKey: 'TrustBadge1', linkKey: 'TrustBadge1Link' },
-  { key: 'charity', label: 'Charity Navigator', imageKey: 'TrustBadge2', linkKey: 'TrustBadge2Link' },
-  { key: 'sectigo', label: 'Secured by Sectigo', imageKey: 'TrustBadge3', linkKey: 'TrustBadge3Link' },
+  {
+    key: 'bbb',
+    label: 'BBB Accredited Business',
+    imageKey: 'TrustBadge1',
+    linkKey: 'TrustBadge1Link',
+  },
+  {
+    key: 'charity',
+    label: 'Charity Navigator',
+    imageKey: 'TrustBadge2',
+    linkKey: 'TrustBadge2Link',
+  },
+  {
+    key: 'sectigo',
+    label: 'Secured by Sectigo',
+    imageKey: 'TrustBadge3',
+    linkKey: 'TrustBadge3Link',
+  },
 ];
 
 const FOOTER_LINKS = {
@@ -190,9 +225,7 @@ export const Default = (props: FooterProps) => {
           {/* Desktop: grid with left column + 3 nav columns */}
           <div className="hidden gap-12 lg:grid lg:grid-cols-[1fr_2fr]">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                {renderLogoBlock('size-10', 'text-lg')}
-              </div>
+              <div className="flex items-center gap-2">{renderLogoBlock('size-10', 'text-lg')}</div>
               <p className="text-foreground text-sm">7272 Greenville Ave. Dallas, TX 75231</p>
               <p className="text-foreground text-sm">1-800-242-8721</p>
               <Link
@@ -263,9 +296,7 @@ export const Default = (props: FooterProps) => {
           {/* Mobile: accordion sections (Contact Us, About Us, Get Involved, Our Sites) */}
           <div className="lg:hidden">
             <div className="mb-6 flex flex-col items-center gap-2">
-              <div className="flex items-center gap-2">
-                {renderLogoBlock('size-12', 'text-xl')}
-              </div>
+              <div className="flex items-center gap-2">{renderLogoBlock('size-12', 'text-xl')}</div>
             </div>
             <Accordion type="multiple" className="w-full">
               <AccordionItem value="contact">
@@ -361,63 +392,70 @@ export const Default = (props: FooterProps) => {
         style={{ backgroundColor: FOOTER_BG }}
       >
         <div className="mx-auto flex w-full max-w-[1170px] flex-wrap items-center justify-between gap-6">
-        <div className="flex items-center gap-3">
-          {SOCIAL_ITEMS.map(({ key, label, iconKey, linkKey }) => {
-            const iconField = fields?.[iconKey] as ImageField | undefined;
-            const linkField = fields?.[linkKey] as LinkField | undefined;
-            const href = linkField?.value?.href ?? '#';
-            const hasIcon = iconField?.value?.src;
-            const content = hasIcon && iconField ? (
-              <ContentSdkImage
-                field={iconField}
-                width={40}
-                height={40}
-                className="size-10 rounded-full object-cover"
-              />
-            ) : (
-              <span className="text-xs font-medium">{label.charAt(0)}</span>
-            );
-            const className =
-              'bg-foreground-light flex size-10 items-center justify-center rounded-full text-white transition-opacity hover:opacity-80';
-            if (linkField?.value?.href) {
+          <div className="flex items-center gap-3">
+            {SOCIAL_ITEMS.map(({ key, label, iconKey, linkKey }) => {
+              const iconField = fields?.[iconKey] as ImageField | undefined;
+              const linkField = fields?.[linkKey] as LinkField | undefined;
+              const href = linkField?.value?.href ?? '#';
+              const hasIcon = iconField?.value?.src;
+              const content =
+                hasIcon && iconField ? (
+                  <ContentSdkImage
+                    field={iconField}
+                    width={40}
+                    height={40}
+                    className="size-10 rounded-full object-cover"
+                  />
+                ) : (
+                  <span className="text-xs font-medium">{label.charAt(0)}</span>
+                );
+              const className =
+                'bg-foreground-light flex size-10 items-center justify-center rounded-full text-white transition-opacity hover:opacity-80';
+              if (linkField?.value?.href) {
+                return (
+                  <ContentSdkLink
+                    key={key}
+                    field={linkField}
+                    className={className}
+                    aria-label={label}
+                  >
+                    {content}
+                  </ContentSdkLink>
+                );
+              }
               return (
-                <ContentSdkLink key={key} field={linkField} className={className} aria-label={label}>
+                <a key={key} href={href} className={className} aria-label={label}>
                   {content}
-                </ContentSdkLink>
+                </a>
               );
-            }
-            return (
-              <a key={key} href={href} className={className} aria-label={label}>
-                {content}
-              </a>
-            );
-          })}
-        </div>
-        <div className="flex items-center gap-4">
-          {TRUST_BADGES.map(({ key, label, imageKey, linkKey }) => {
-            const imageField = fields?.[imageKey] as ImageField | undefined;
-            const linkField = fields?.[linkKey] as LinkField | undefined;
-            const hasImage = imageField?.value?.src;
-            const content = hasImage && imageField ? (
-              <ContentSdkImage
-                field={imageField}
-                width={80}
-                height={32}
-                className="h-8 w-auto object-contain"
-              />
-            ) : (
-              <span className="text-foreground-light text-xs">{label}</span>
-            );
-            if (linkField?.value?.href) {
-              return (
-                <ContentSdkLink key={key} field={linkField} className="shrink-0">
-                  {content}
-                </ContentSdkLink>
-              );
-            }
-            return <span key={key}>{content}</span>;
-          })}
-        </div>
+            })}
+          </div>
+          <div className="flex items-center gap-4">
+            {TRUST_BADGES.map(({ key, label, imageKey, linkKey }) => {
+              const imageField = fields?.[imageKey] as ImageField | undefined;
+              const linkField = fields?.[linkKey] as LinkField | undefined;
+              const hasImage = imageField?.value?.src;
+              const content =
+                hasImage && imageField ? (
+                  <ContentSdkImage
+                    field={imageField}
+                    width={80}
+                    height={32}
+                    className="h-8 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-foreground-light text-xs">{label}</span>
+                );
+              if (linkField?.value?.href) {
+                return (
+                  <ContentSdkLink key={key} field={linkField} className="shrink-0">
+                    {content}
+                  </ContentSdkLink>
+                );
+              }
+              return <span key={key}>{content}</span>;
+            })}
+          </div>
         </div>
       </div>
 
@@ -427,24 +465,24 @@ export const Default = (props: FooterProps) => {
         style={{ backgroundColor: FOOTER_BG }}
       >
         <div className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-2">
-        <div className="text-foreground flex flex-wrap justify-center gap-x-1 gap-y-1 text-sm">
-          {LEGAL_LINKS.map((label, i) => (
-            <span key={label} className="flex items-center gap-1">
-              {i > 0 && <span>|</span>}
-              <Link href="#" className="hover:underline">
-                {label}
-              </Link>
-            </span>
-          ))}
-        </div>
-        <Link href="#" className="text-foreground text-sm hover:underline">
-          Your Privacy Rights
-        </Link>
-        <p className="text-foreground-light max-w-3xl text-center text-xs">
-          ©2026 American Heart Association, Inc. All rights reserved. Unauthorized use prohibited.
-          The American Heart Association is a qualified 501(c)(3) tax-exempt organization. Red
-          Dress™ DHHS, Go Red™ AHA; National Wear Red Day® is a registered trademark.
-        </p>
+          <div className="text-foreground flex flex-wrap justify-center gap-x-1 gap-y-1 text-sm">
+            {LEGAL_LINKS.map((label, i) => (
+              <span key={label} className="flex items-center gap-1">
+                {i > 0 && <span>|</span>}
+                <Link href="#" className="hover:underline">
+                  {label}
+                </Link>
+              </span>
+            ))}
+          </div>
+          <Link href="#" className="text-foreground text-sm hover:underline">
+            Your Privacy Rights
+          </Link>
+          <p className="text-foreground-light max-w-3xl text-center text-xs">
+            ©2026 American Heart Association, Inc. All rights reserved. Unauthorized use prohibited.
+            The American Heart Association is a qualified 501(c)(3) tax-exempt organization. Red
+            Dress™ DHHS, Go Red™ AHA; National Wear Red Day® is a registered trademark.
+          </p>
         </div>
       </div>
     </section>
