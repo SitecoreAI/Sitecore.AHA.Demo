@@ -121,7 +121,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
           <div className="relative flex flex-1 justify-end lg:flex-[6]">
             <ContentSdkImage
               field={fields.Image}
-              className="max-h-[28rem] w-full rounded-lg object-cover object-center lg:max-h-[32rem] lg:rounded-xl"
+              className="max-h-[28rem] w-full rounded-lg object-cover object-center shadow-[0_8px_24px_rgba(0,0,0,0.5)] lg:max-h-[32rem] lg:rounded-xl"
             />
           </div>
         </div>
