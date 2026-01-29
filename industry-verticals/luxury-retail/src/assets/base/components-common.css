@@ -58,6 +58,18 @@
   @apply text-foreground hover:text-foreground-light font-light transition-colors hover:!no-underline lg:whitespace-nowrap;
 }
 
+/* Header nav: AHA red underline on hover, keep text black */
+.component.header .navigation-item {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.component.header .navigation-item:hover {
+  color: var(--color-foreground) !important;
+  border-bottom-color: var(--color-aha-red);
+  text-decoration: none !important;
+}
+
 .navigation-item-primary {
   @apply [.drawer-content_&]:text-xl;
 }
