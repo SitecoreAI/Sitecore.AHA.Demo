@@ -74,7 +74,7 @@ function Card({
       </div>
       <div className="flex h-24 shrink-0 items-start overflow-hidden">
         {(copy?.value || isPageEditing) && (
-          <p className="font-body text-foreground-light text-sm leading-relaxed line-clamp-4 lg:text-base">
+          <p className="font-body text-foreground-light line-clamp-4 text-sm leading-relaxed lg:text-base">
             <ContentSdkText field={copy} />
           </p>
         )}
@@ -90,10 +90,7 @@ export const Default = ({ params, fields }: AHACardsProps) => {
 
   if (!fields) {
     return isPageEditing ? (
-      <section
-        className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`}
-        id={id}
-      >
+      <section className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`} id={id}>
         <div className="container mx-auto max-w-[1170px]">[AHA CARDS]</div>
       </section>
     ) : (
@@ -108,11 +105,8 @@ export const Default = ({ params, fields }: AHACardsProps) => {
   }));
 
   return (
-    <section
-      className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`}
-      id={id}
-    >
-      <div className="container mx-auto max-w-[1170px] grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
+    <section className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`} id={id}>
+      <div className="container mx-auto grid max-w-[1170px] grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
         {cards.map((card, index) => (
           <Card
             key={index}
