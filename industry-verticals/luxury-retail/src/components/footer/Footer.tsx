@@ -144,26 +144,35 @@ export const Default = (props: FooterProps) => {
     );
 
   return (
-    <section className="component footer relative overflow-hidden" id={id}>
-      {/* Top CTA banner */}
+    <section
+      className="component footer relative min-w-full"
+      id={id}
+      style={{
+        width: '100vw',
+        marginLeft: 'calc(50% - 50vw)',
+      }}
+    >
+      {/* Top CTA banner: red full viewport width; inner content centered, max 1170px */}
       <div
-        className="flex flex-col items-center justify-center gap-4 px-4 py-8 text-white"
+        className="flex w-full flex-col items-center justify-center py-8 text-white"
         style={{ backgroundColor: AHA_RED }}
       >
-        <p className="text-center text-lg font-medium">
-          Donate today to help end heart disease and stroke for everyone.
-        </p>
-        <Link
-          href="#"
-          className="rounded-full border-2 border-transparent bg-white px-8 py-2.5 font-medium transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white"
-          style={{ color: AHA_RED }}
-        >
-          Donate Now
-        </Link>
+        <div className="mx-auto flex w-full max-w-[1170px] flex-col items-center justify-center gap-4 px-4">
+          <p className="text-center text-lg font-medium">
+            Donate today to help end heart disease and stroke for everyone.
+          </p>
+          <Link
+            href="#"
+            className="rounded-full border-2 border-transparent bg-white px-8 py-2.5 font-medium transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white"
+            style={{ color: AHA_RED }}
+          >
+            Donate Now
+          </Link>
+        </div>
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-white px-4 py-4">
+      <div className="w-full bg-white px-4 py-4">
         <p className="text-foreground-light mx-auto max-w-[1170px] text-center text-sm">
           *All health/medical information on this website has been reviewed and approved by the
           American Heart Association, based on scientific research and American Heart Association
@@ -175,8 +184,8 @@ export const Default = (props: FooterProps) => {
       </div>
 
       {/* Main footer content */}
-      <div className="bg-white px-4 py-10">
-        <div className="mx-auto max-w-[1170px]">
+      <div className="w-full bg-white px-4 py-10">
+        <div className="mx-auto w-full max-w-[1170px]">
           {/* Desktop: grid with left column + 3 nav columns */}
           <div className="hidden gap-12 lg:grid lg:grid-cols-[1fr_2fr]">
             <div className="flex flex-col gap-4">
@@ -348,7 +357,8 @@ export const Default = (props: FooterProps) => {
       </div>
 
       {/* Social + trust bar */}
-      <div className="bg-background-muted flex flex-wrap items-center justify-between gap-6 px-4 py-6">
+      <div className="flex w-full flex-wrap items-center justify-between gap-6 bg-background-muted px-4 py-6">
+        <div className="mx-auto flex w-full max-w-[1170px] flex-wrap items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           {SOCIAL_ITEMS.map(({ key, label, iconKey, linkKey }) => {
             const iconField = fields?.[iconKey] as ImageField | undefined;
@@ -406,10 +416,12 @@ export const Default = (props: FooterProps) => {
             return <span key={key}>{content}</span>;
           })}
         </div>
+        </div>
       </div>
 
       {/* Bottom legal */}
-      <div className="bg-background-muted flex flex-col items-center gap-2 px-4 py-6">
+      <div className="flex w-full flex-col items-center gap-2 bg-background-muted px-4 py-6">
+        <div className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-2">
         <div className="text-foreground flex flex-wrap justify-center gap-x-1 gap-y-1 text-sm">
           {LEGAL_LINKS.map((label, i) => (
             <span key={label} className="flex items-center gap-1">
@@ -428,6 +440,7 @@ export const Default = (props: FooterProps) => {
           The American Heart Association is a qualified 501(c)(3) tax-exempt organization. Red
           Dress™ DHHS, Go Red™ AHA; National Wear Red Day® is a registered trademark.
         </p>
+        </div>
       </div>
     </section>
   );
