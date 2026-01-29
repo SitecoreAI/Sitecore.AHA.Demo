@@ -49,27 +49,36 @@ function Card({
 }) {
   const hasIcon = icon?.value?.src || isPageEditing;
   return (
-    <article className="flex flex-col rounded-lg bg-white p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] lg:p-8">
-      {hasIcon && (
-        <div className="mb-4 flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#c10e21] lg:size-16">
-          <ContentSdkImage
-            field={icon}
-            width={32}
-            height={32}
-            className="size-7 object-contain object-center lg:size-8"
-          />
-        </div>
-      )}
-      {(title?.value || isPageEditing) && (
-        <h3 className="font-body text-foreground mb-2 text-lg font-bold lg:text-xl">
-          <ContentSdkText field={title} />
-        </h3>
-      )}
-      {(copy?.value || isPageEditing) && (
-        <p className="font-body text-foreground-light text-sm leading-relaxed lg:text-base">
-          <ContentSdkText field={copy} />
-        </p>
-      )}
+    <article className="flex h-[320px] min-w-0 flex-1 flex-col rounded-lg bg-white p-6 shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-shadow hover:shadow-[0_4px_12px_rgba(0,0,0,0.3),inset_0_0_0_10px_#e8b4b4] lg:p-8">
+      {/* Spacer pushes icon/title/copy block to bottom */}
+      <div className="min-h-0 flex-1" />
+      {/* Fixed-height rows so icon/title/copy tops align across all cards */}
+      <div className="flex h-20 shrink-0 items-center">
+        {hasIcon && (
+          <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#c10e21] lg:size-16">
+            <ContentSdkImage
+              field={icon}
+              width={32}
+              height={32}
+              className="size-7 object-contain object-center lg:size-8"
+            />
+          </div>
+        )}
+      </div>
+      <div className="flex h-14 shrink-0 items-start">
+        {(title?.value || isPageEditing) && (
+          <h3 className="font-body text-foreground text-lg font-bold lg:text-xl">
+            <ContentSdkText field={title} />
+          </h3>
+        )}
+      </div>
+      <div className="flex h-24 shrink-0 items-start overflow-hidden">
+        {(copy?.value || isPageEditing) && (
+          <p className="font-body text-foreground-light text-sm leading-relaxed line-clamp-4 lg:text-base">
+            <ContentSdkText field={copy} />
+          </p>
+        )}
+      </div>
     </article>
   );
 }
@@ -82,10 +91,10 @@ export const Default = ({ params, fields }: AHACardsProps) => {
   if (!fields) {
     return isPageEditing ? (
       <section
-        className={`component aha-cards bg-background-muted py-12 lg:py-16 ${styles || ''}`}
+        className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`}
         id={id}
       >
-        <div className="container">[AHA CARDS]</div>
+        <div className="container mx-auto max-w-[1170px]">[AHA CARDS]</div>
       </section>
     ) : (
       <></>
@@ -100,10 +109,10 @@ export const Default = ({ params, fields }: AHACardsProps) => {
 
   return (
     <section
-      className={`component aha-cards bg-background-muted py-12 lg:py-16 ${styles || ''}`}
+      className={`component aha-cards bg-white py-12 lg:py-16 ${styles || ''}`}
       id={id}
     >
-      <div className="container grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="container mx-auto max-w-[1170px] grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
         {cards.map((card, index) => (
           <Card
             key={index}

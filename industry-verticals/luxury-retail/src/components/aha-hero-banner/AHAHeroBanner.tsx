@@ -55,7 +55,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
           className="absolute inset-0 z-0 bg-[#c10e21] [clip-path:inset(0_0_8rem_0)]"
           aria-hidden
         />
-        <div className="relative z-10 container flex min-h-[24rem] items-center pt-[10px] pb-[10px] lg:min-h-[28rem]">
+        <div className="relative z-10 container mx-auto max-w-[1170px] flex min-h-[24rem] items-center pt-[10px] pb-[10px] lg:min-h-[28rem]">
           [AHA HERO BANNER]
         </div>
       </section>
@@ -74,7 +74,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
         className="absolute inset-0 z-0 bg-[#c10e21] [clip-path:inset(0_0_8rem_0)]"
         aria-hidden
       />
-      <div className="relative z-10 container flex min-h-[24rem] flex-col gap-6 pt-[10px] pb-[10px] lg:min-h-[28rem] lg:gap-8">
+      <div className="relative z-10 container mx-auto max-w-[1170px] flex min-h-[24rem] flex-col gap-6 pt-[10px] pb-[10px] lg:min-h-[28rem] lg:gap-8">
         {/* Branding: full width */}
         <div className="flex w-full items-center gap-2">
           {fields.Logo && (fields.Logo?.value?.src || isPageEditing) ? (
