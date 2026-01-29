@@ -70,6 +70,10 @@
   text-decoration: none !important;
 }
 
+.component.header {
+  min-height: 121px;
+}
+
 /* Footer: AHA red underline on hover for text links only; buttons (rounded-full) get no underline */
 .component.footer a:not(.rounded-full) {
   border-bottom: 2px solid transparent;
