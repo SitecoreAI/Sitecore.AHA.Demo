@@ -12,7 +12,7 @@ SharedFields:
   Value: "{CF06B8FB-5542-413B-AAE3-2CE3ABC3E31D}"
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/layout_4_blocks.png
+  Value: Core3/32x32/copy_clipboard.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Cards/AHA Cards"
