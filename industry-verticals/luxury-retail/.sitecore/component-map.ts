@@ -60,7 +60,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
-  ['Footer', { ...Footer }],
+  ['Footer', { ...Footer, componentType: 'client' }],
   ['Features', { ...Features }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
