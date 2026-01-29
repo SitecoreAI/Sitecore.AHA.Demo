@@ -70,6 +70,17 @@
   text-decoration: none !important;
 }
 
+/* Footer: AHA red underline on hover for text links only; buttons (rounded-full) get no underline */
+.component.footer a:not(.rounded-full) {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.component.footer a:not(.rounded-full):hover {
+  border-bottom-color: var(--color-aha-red);
+  text-decoration: none !important;
+}
+
 .navigation-item-primary {
   @apply [.drawer-content_&]:text-xl;
 }

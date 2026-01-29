@@ -129,17 +129,30 @@ const TRUST_BADGES: Array<{
 const FOOTER_LINKS = {
   aboutUs: [
     { label: 'About the AHA/ASA', href: '#' },
+    { label: 'Our Impact', href: '#' },
+    { label: 'Annual Report', href: '#' },
+    { label: 'Financial Information', href: '#' },
+    { label: 'International Programs', href: '#' },
+    { label: 'Latest Heart and Stroke News', href: '#' },
+    { label: 'Media Newsroom', href: '#' },
     { label: 'Careers', href: '#' },
-    { label: 'Newsroom', href: '#' },
   ],
   getInvolved: [
     { label: 'Donate Now', href: '#' },
-    { label: 'Volunteer', href: '#' },
+    { label: 'Make a Memorial Gift', href: '#' },
+    { label: 'Ways to Give', href: '#' },
     { label: 'Advocate', href: '#' },
+    { label: 'Volunteer', href: '#' },
+    { label: 'Go Red For Women', href: '#' },
+    { label: 'ShopHeart', href: '#' },
+    { label: 'ShopCPR', href: '#' },
   ],
   ourSites: [
     { label: 'American Heart Association', href: '#' },
     { label: 'American Stroke Association', href: '#' },
+    { label: 'CPR & ECC', href: '#' },
+    { label: 'Professional Heart Daily', href: '#' },
+    { label: 'More Sites', href: '#' },
   ],
 };
 
@@ -168,8 +181,8 @@ export const Default = (props: FooterProps) => {
       <ContentSdkImage
         field={fields.Logo}
         width={160}
-        height={40}
-        className={`${iconSize} shrink-0 object-contain object-left`}
+        height={96}
+        className="h-24 w-40 shrink-0 object-contain object-left"
       />
     ) : (
       <>
@@ -243,48 +256,48 @@ export const Default = (props: FooterProps) => {
             </div>
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <h5 className="text-foreground mb-4 font-bold">About Us</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">About Us</h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.aboutUs.map((item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                        className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                       >
-                        <ChevronRight className="size-4 shrink-0" />
                         {item.label}
+                        <ChevronRight className="size-4 shrink-0" />
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h5 className="text-foreground mb-4 font-bold">Get Involved</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">Get Involved</h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.getInvolved.map((item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                        className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                       >
-                        <ChevronRight className="size-4 shrink-0" />
                         {item.label}
+                        <ChevronRight className="size-4 shrink-0" />
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h5 className="text-foreground mb-4 font-bold">Our Sites</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">Our Sites</h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.ourSites.map((item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                        className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                       >
-                        <ChevronRight className="size-4 shrink-0" />
                         {item.label}
+                        <ChevronRight className="size-4 shrink-0" />
                       </Link>
                     </li>
                   ))}
@@ -326,10 +339,10 @@ export const Default = (props: FooterProps) => {
                       <li key={item.label}>
                         <Link
                           href={item.href}
-                          className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                          className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                         >
-                          <ChevronRight className="size-4 shrink-0" />
                           {item.label}
+                          <ChevronRight className="size-4 shrink-0" />
                         </Link>
                       </li>
                     ))}
@@ -344,10 +357,10 @@ export const Default = (props: FooterProps) => {
                       <li key={item.label}>
                         <Link
                           href={item.href}
-                          className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                          className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                         >
-                          <ChevronRight className="size-4 shrink-0" />
                           {item.label}
+                          <ChevronRight className="size-4 shrink-0" />
                         </Link>
                       </li>
                     ))}
@@ -362,10 +375,10 @@ export const Default = (props: FooterProps) => {
                       <li key={item.label}>
                         <Link
                           href={item.href}
-                          className="text-foreground flex items-center gap-1 text-sm hover:underline"
+                          className="text-foreground flex w-full items-center justify-between text-sm hover:underline"
                         >
-                          <ChevronRight className="size-4 shrink-0" />
                           {item.label}
+                          <ChevronRight className="size-4 shrink-0" />
                         </Link>
                       </li>
                     ))}
@@ -404,13 +417,13 @@ export const Default = (props: FooterProps) => {
                     field={iconField}
                     width={40}
                     height={40}
-                    className="size-10 rounded-full object-cover"
+                    className="size-10 object-contain"
                   />
                 ) : (
-                  <span className="text-xs font-medium">{label.charAt(0)}</span>
+                  <span className="text-foreground-light text-xs">{label.charAt(0)}</span>
                 );
               const className =
-                'bg-foreground-light flex size-10 items-center justify-center rounded-full text-white transition-opacity hover:opacity-80';
+                'inline-flex items-center justify-center transition-opacity hover:opacity-80';
               if (linkField?.value?.href) {
                 return (
                   <ContentSdkLink
