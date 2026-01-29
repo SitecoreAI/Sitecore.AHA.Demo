@@ -256,7 +256,9 @@ export const Default = (props: FooterProps) => {
             </div>
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">About Us</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold tracking-wide uppercase">
+                  About Us
+                </h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.aboutUs.map((item) => (
                     <li key={item.label}>
@@ -272,7 +274,9 @@ export const Default = (props: FooterProps) => {
                 </ul>
               </div>
               <div>
-                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">Get Involved</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold tracking-wide uppercase">
+                  Get Involved
+                </h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.getInvolved.map((item) => (
                     <li key={item.label}>
@@ -288,7 +292,9 @@ export const Default = (props: FooterProps) => {
                 </ul>
               </div>
               <div>
-                <h5 className="text-foreground mb-2 text-xs font-bold uppercase tracking-wide">Our Sites</h5>
+                <h5 className="text-foreground mb-2 text-xs font-bold tracking-wide uppercase">
+                  Our Sites
+                </h5>
                 <ul className="space-y-2">
                   {FOOTER_LINKS.ourSites.map((item) => (
                     <li key={item.label}>

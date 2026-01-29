@@ -31,8 +31,8 @@ import * as Features from 'src/components/features/Features';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
-import * as AHACards from 'src/components/aha-cards/AHACards';
 import * as AHAHeroBanner from 'src/components/aha-hero-banner/AHAHeroBanner';
+import * as AHACards from 'src/components/aha-cards/AHACards';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -65,8 +65,8 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
-  ['AHACards', { ...AHACards, componentType: 'client' }],
   ['AHAHeroBanner', { ...AHAHeroBanner }],
+  ['AHACards', { ...AHACards, componentType: 'client' }],
 ]);
 
 export default componentMap;
