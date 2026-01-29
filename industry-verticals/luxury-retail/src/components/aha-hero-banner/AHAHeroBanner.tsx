@@ -31,6 +31,7 @@ interface Fields {
   Button1: LinkField;
   Button2: LinkField;
   Image: ImageField;
+  Logo?: ImageField;
 }
 
 interface AHAHeroBannerProps extends ComponentProps {
@@ -65,15 +66,22 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
       <div className="container flex min-h-[32rem] flex-col gap-8 py-12 lg:flex-row lg:items-center lg:gap-12">
         {/* Left: content (~60%) */}
         <div className="flex flex-1 flex-col justify-center space-y-6 text-white lg:flex-[6]">
-          {/* Hard-coded branding */}
+          {/* Branding: customizable logo or default heart */}
           <div className="flex items-center gap-2">
-            <HeartIcon className="size-6 shrink-0 text-white" />
+            {fields.Logo && (fields.Logo?.value?.src || isPageEditing) ? (
+              <ContentSdkImage
+                field={fields.Logo}
+                className="size-6 shrink-0 object-contain object-left"
+              />
+            ) : (
+              <HeartIcon className="size-6 shrink-0 text-white" />
+            )}
             <span className="font-body text-base font-normal text-white">
               American Heart Association
             </span>
           </div>
 
-          <h1 className="font-heading text-3xl leading-tight font-bold tracking-tight lg:text-5xl xl:text-6xl">
+          <h1 className="font-body text-3xl leading-tight font-medium tracking-tight text-white lg:text-5xl xl:text-6xl">
             <ContentSdkText field={fields.Title} />
           </h1>
 

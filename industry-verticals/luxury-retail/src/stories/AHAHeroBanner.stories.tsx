@@ -22,7 +22,7 @@ const baseRendering = {
   params: baseParams,
 };
 
-const createAHAHeroBannerFields = (options?: { withButton2?: boolean }) => ({
+const createAHAHeroBannerFields = (options?: { withButton2?: boolean; withLogo?: boolean }) => ({
   Title: createTextField('3X Impact for Wear Red and Give Day'),
   Copy: {
     value: `<div class="ck-content"><p>Give by February 6 for 3X impact and join a nation supporting women's heart health.</p></div>`,
@@ -30,6 +30,7 @@ const createAHAHeroBannerFields = (options?: { withButton2?: boolean }) => ({
   Button1: createLinkField('Donate Once'),
   Button2: options?.withButton2 !== false ? createLinkField('Donate Monthly') : createLinkField(''),
   Image: createImageField('placeholder'),
+  ...(options?.withLogo && { Logo: createImageField('placeholder') }),
 });
 
 export const Default: Story = {
@@ -42,6 +43,13 @@ export const Default: Story = {
 export const WithoutButton2: Story = {
   render: () => {
     const fields = createAHAHeroBannerFields({ withButton2: false });
+    return <AHAHeroBanner params={baseParams} rendering={baseRendering} fields={fields} />;
+  },
+};
+
+export const WithCustomLogo: Story = {
+  render: () => {
+    const fields = createAHAHeroBannerFields({ withLogo: true });
     return <AHAHeroBanner params={baseParams} rendering={baseRendering} fields={fields} />;
   },
 };
