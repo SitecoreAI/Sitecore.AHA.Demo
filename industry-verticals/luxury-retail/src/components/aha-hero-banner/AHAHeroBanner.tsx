@@ -52,7 +52,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
         id={id}
       >
         <div
-          className="absolute inset-0 z-0 bg-[#C10E0E] [clip-path:inset(0_0_8rem_0)]"
+          className="absolute inset-0 z-0 bg-[#c10e21] [clip-path:inset(0_0_8rem_0)]"
           aria-hidden
         />
         <div className="relative z-10 container flex min-h-[24rem] items-center pt-[10px] pb-[10px] lg:min-h-[28rem]">
@@ -71,7 +71,7 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
     >
       {/* Red background: bottom clipped so image extends onto white below */}
       <div
-        className="absolute inset-0 z-0 bg-[#C10E0E] [clip-path:inset(0_0_8rem_0)]"
+        className="absolute inset-0 z-0 bg-[#c10e21] [clip-path:inset(0_0_8rem_0)]"
         aria-hidden
       />
       <div className="relative z-10 container flex min-h-[24rem] flex-col gap-6 pt-[10px] pb-[10px] lg:min-h-[28rem] lg:gap-8">
@@ -107,13 +107,13 @@ export const Default = ({ params, fields }: AHAHeroBannerProps) => {
               {(fields.Button1?.value?.href || isPageEditing) && (
                 <Link
                   field={fields.Button1}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90 max-sm:w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#c10e21] bg-white px-6 py-2.5 font-light text-[#c10e21] transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white max-sm:w-full sm:w-auto"
                 />
               )}
               {showButton2 && (fields.Button2?.value?.href || isPageEditing) && (
                 <Link
                   field={fields.Button2}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#C10E0E] bg-white px-6 py-2.5 font-light text-[#C10E0E] transition-colors hover:bg-white/90 max-sm:w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#c10e21] bg-white px-6 py-2.5 font-light text-[#c10e21] transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white max-sm:w-full sm:w-auto"
                 />
               )}
             </div>
