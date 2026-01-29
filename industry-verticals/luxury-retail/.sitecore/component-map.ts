@@ -25,13 +25,14 @@ import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
 import * as Image from 'src/components/image/Image';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
-import * as AHAHeroBanner from 'src/components/aha-hero-banner/AHAHeroBanner';
 import * as Header from 'src/components/header/Header';
 import * as Footer from 'src/components/footer/Footer';
 import * as Features from 'src/components/features/Features';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
+import * as AHACards from 'src/components/aha-cards/AHACards';
+import * as AHAHeroBanner from 'src/components/aha-hero-banner/AHAHeroBanner';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
@@ -58,13 +59,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
-  ['AHAHeroBanner', { ...AHAHeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
   ['Footer', { ...Footer }],
   ['Features', { ...Features }],
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['AHACards', { ...AHACards, componentType: 'client' }],
+  ['AHAHeroBanner', { ...AHAHeroBanner }],
 ]);
 
 export default componentMap;
