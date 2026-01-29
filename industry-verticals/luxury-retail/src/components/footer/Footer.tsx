@@ -62,6 +62,7 @@ type FooterProps = {
 };
 
 const AHA_RED = '#c10e21';
+const FOOTER_BG = '#e9ecef';
 
 const SOCIAL_ITEMS: Array<{
   key: string;
@@ -163,8 +164,7 @@ export const Default = (props: FooterProps) => {
           </p>
           <Link
             href="#"
-            className="rounded-full border-2 border-transparent bg-white px-8 py-2.5 font-medium transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white"
-            style={{ color: AHA_RED }}
+            className="rounded-full border-2 border-transparent bg-white px-8 py-2.5 font-medium text-[#c10e21] transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white"
           >
             Donate Now
           </Link>
@@ -172,19 +172,19 @@ export const Default = (props: FooterProps) => {
       </div>
 
       {/* Disclaimer */}
-      <div className="w-full bg-white px-4 py-4">
+      <div className="w-full px-4 py-4" style={{ backgroundColor: FOOTER_BG }}>
         <p className="text-foreground-light mx-auto max-w-[1170px] text-center text-sm">
           *All health/medical information on this website has been reviewed and approved by the
           American Heart Association, based on scientific research and American Heart Association
           guidelines.{' '}
-          <a href="#" className="text-blue-600 underline">
+          <a href="#" className="text-blue-600 underline hover:text-blue-700">
             Find more information on our content editorial process.
           </a>
         </p>
       </div>
 
       {/* Main footer content */}
-      <div className="w-full bg-white px-4 py-10">
+      <div className="w-full px-4 py-10" style={{ backgroundColor: FOOTER_BG }}>
         <div className="mx-auto w-full max-w-[1170px]">
           {/* Desktop: grid with left column + 3 nav columns */}
           <div className="hidden gap-12 lg:grid lg:grid-cols-[1fr_2fr]">
@@ -196,8 +196,7 @@ export const Default = (props: FooterProps) => {
               <p className="text-foreground text-sm">1-800-242-8721</p>
               <Link
                 href="#"
-                className="inline-flex w-fit rounded-full border-2 border-transparent px-6 py-2.5 text-sm font-medium text-white transition-colors hover:border-[#c10e21] hover:bg-white hover:text-[#c10e21]"
-                style={{ backgroundColor: AHA_RED }}
+                className="inline-flex w-fit rounded-full border-2 border-transparent bg-[#c10e21] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:border-[#c10e21] hover:bg-white hover:text-[#c10e21]"
               >
                 Contact Us
               </Link>
@@ -280,8 +279,7 @@ export const Default = (props: FooterProps) => {
                     <p>Tax ID: 13-5613797</p>
                     <Link
                       href="#"
-                      className="text-background mt-2 inline-block rounded-full px-6 py-2.5 text-sm font-medium"
-                      style={{ backgroundColor: AHA_RED }}
+                      className="mt-2 inline-block rounded-full border-2 border-transparent bg-[#c10e21] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:border-[#c10e21] hover:bg-white hover:text-[#c10e21]"
                     >
                       Contact Us
                     </Link>
@@ -357,7 +355,10 @@ export const Default = (props: FooterProps) => {
       </div>
 
       {/* Social + trust bar */}
-      <div className="flex w-full flex-wrap items-center justify-between gap-6 bg-background-muted px-4 py-6">
+      <div
+        className="flex w-full flex-wrap items-center justify-between gap-6 px-4 py-6"
+        style={{ backgroundColor: FOOTER_BG }}
+      >
         <div className="mx-auto flex w-full max-w-[1170px] flex-wrap items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           {SOCIAL_ITEMS.map(({ key, label, iconKey, linkKey }) => {
@@ -420,7 +421,10 @@ export const Default = (props: FooterProps) => {
       </div>
 
       {/* Bottom legal */}
-      <div className="flex w-full flex-col items-center gap-2 bg-background-muted px-4 py-6">
+      <div
+        className="flex w-full flex-col items-center gap-2 px-4 py-6"
+        style={{ backgroundColor: FOOTER_BG }}
+      >
         <div className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-2">
         <div className="text-foreground flex flex-wrap justify-center gap-x-1 gap-y-1 text-sm">
           {LEGAL_LINKS.map((label, i) => (
