@@ -30,7 +30,7 @@ export const Default = (props: AHATextPromoProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        <div className="border-4 bg-white p-8 lg:p-12" style={{ borderColor: AHA_RED }}>
+        <div className="bg-white p-8 lg:p-12" style={{ border: `15px solid ${AHA_RED}` }}>
           <div className="space-y-6">
             {/* Promo Text with italic support for "Healthy for Good™" */}
             <div className="text-foreground text-base leading-relaxed lg:text-lg">
