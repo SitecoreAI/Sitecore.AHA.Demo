@@ -13,20 +13,20 @@ interface Fields {
   PromoButton: LinkField;
 }
 
-export type TextOnlyPromoProps = ComponentProps & {
+export type AHATextPromoProps = ComponentProps & {
   fields: Fields;
 };
 
 const AHA_RED = '#c10e21';
 
-export const Default = (props: TextOnlyPromoProps): JSX.Element => {
+export const Default = (props: AHATextPromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
   return (
     <section
-      className={`component text-only-promo py-10 lg:py-16 ${props.params.styles || ''}`}
+      className={`component aha-text-promo py-10 lg:py-16 ${props.params.styles || ''}`}
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">

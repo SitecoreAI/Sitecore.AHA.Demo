@@ -1,18 +1,15 @@
 ---
-ID: "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b"
+ID: "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d"
 Parent: "8f3a1e2b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/Text-Only Promo/Text-Only Promo Folder"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Text Promo/AHA Text Promo"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Applications/16x16/folder.png
-- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
-  Hint: __Base template
-  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+  Value: Office/32x32/document_text.png
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "f6a7b8c9-d0e1-2345-f012-3456789abcde"
+  Value: "b2c3d4e5-f6a7-8901-bcde-f12345678901"
 Languages:
 - Language: en
   Versions:

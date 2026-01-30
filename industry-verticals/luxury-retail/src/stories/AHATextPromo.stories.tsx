@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Default as TextOnlyPromo } from '../components/text-only-promo/TextOnlyPromo';
+import { Default as AHATextPromo } from '../components/aha-text-promo/AHATextPromo';
 import { CommonParams, CommonRendering } from './common/commonData';
 
 const meta = {
-  title: 'Components/TextOnlyPromo',
-  component: TextOnlyPromo,
+  title: 'Components/AHATextPromo',
+  component: AHATextPromo,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof TextOnlyPromo>;
+} satisfies Meta<typeof AHATextPromo>;
 
 export default meta;
-type Story = StoryObj<typeof TextOnlyPromo>;
+type Story = StoryObj<typeof AHATextPromo>;
 
-const createTextOnlyPromoFields = () => ({
+const createAHATextPromoFields = () => ({
   PromoText: {
     value:
       '<p>Join the movement in getting <em>Healthy for Good™</em> today. Because when good health is lived, it can nourish every part of you, your family, and your community for a lifetime.</p>',
@@ -29,7 +29,7 @@ const createTextOnlyPromoFields = () => ({
 
 export const Default: Story = {
   render: () => {
-    const fields = createTextOnlyPromoFields();
-    return <TextOnlyPromo params={CommonParams} rendering={CommonRendering} fields={fields} />;
+    const fields = createAHATextPromoFields();
+    return <AHATextPromo params={CommonParams} rendering={CommonRendering} fields={fields} />;
   },
 };

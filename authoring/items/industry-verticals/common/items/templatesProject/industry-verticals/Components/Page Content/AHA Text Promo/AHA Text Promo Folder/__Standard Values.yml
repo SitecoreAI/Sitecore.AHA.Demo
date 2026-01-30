@@ -2,7 +2,7 @@
 ID: "4f5a6b7c-8d9e-0f1a-2b3c-4d5e6f7a8b9c"
 Parent: "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b"
 Template: "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b"
-Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/Text-Only Promo/Text-Only Promo Folder/__Standard Values"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Text Promo/AHA Text Promo Folder/__Standard Values"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

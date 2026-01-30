@@ -1,24 +1,24 @@
 ---
-ID: "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e"
-Parent: "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d"
+ID: "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+Parent: "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/Text-Only Promo/Text-Only Promo/Text-Only Promo"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Text Promo/AHA Text Promo/AHA Text Promo/PromoButton"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/document_text.png
+  Value: Office/32x32/link.png
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: __Source
   Value: 
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: __Type
-  Value: 
+  Value: "General Link"
 - ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
   Hint: __Sortorder
-  Value: 100
+  Value: 200
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "c3d4e5f6-a7b8-9012-cdef-123456789012"
+  Value: "e5f6a7b8-c9d0-1234-ef01-23456789abcd"
 Languages:
 - Language: en
   Versions:
