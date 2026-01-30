@@ -57,7 +57,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
           <DesignLibraryLayout />
         ) : (
           <>
-            <header className="sticky top-0 z-50 bg-background">
+            <header className="bg-background sticky top-0 z-50">
               <div id="header">
                 {route && <Placeholder name="headless-header" rendering={route} />}
               </div>
