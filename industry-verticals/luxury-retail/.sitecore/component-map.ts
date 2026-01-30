@@ -33,6 +33,7 @@ import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
 import * as ColumnSplitter from 'src/components/column-splitter/ColumnSplitter';
 import * as AHATextPromo from 'src/components/aha-text-promo/AHATextPromo';
+import * as AHAPromo from 'src/components/aha-promo/AHAPromo';
 import * as AHAHeroBanner from 'src/components/aha-hero-banner/AHAHeroBanner';
 import * as AHAChangingTheFuture from 'src/components/aha-changing-the-future/AHAChangingTheFuture';
 import * as AHACards from 'src/components/aha-cards/AHACards';
@@ -70,6 +71,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
   ['AHATextPromo', { ...AHATextPromo }],
+  ['AHAPromo', { ...AHAPromo }],
   ['AHAHeroBanner', { ...AHAHeroBanner }],
   ['AHAChangingTheFuture', { ...AHAChangingTheFuture }],
   ['AHACards', { ...AHACards, componentType: 'client' }],
