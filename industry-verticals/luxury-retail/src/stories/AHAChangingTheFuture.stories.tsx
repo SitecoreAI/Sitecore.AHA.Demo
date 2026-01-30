@@ -14,7 +14,5 @@ export default meta;
 type Story = StoryObj<typeof AHAChangingTheFuture>;
 
 export const Default: Story = {
-  render: () => (
-    <AHAChangingTheFuture params={CommonParams} rendering={CommonRendering} />
-  ),
+  render: () => <AHAChangingTheFuture params={CommonParams} rendering={CommonRendering} />,
 };

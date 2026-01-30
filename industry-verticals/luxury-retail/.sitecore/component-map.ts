@@ -69,9 +69,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ContentBlock', { ...ContentBlock }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
-  ['AHAChangingTheFuture', { ...AHAChangingTheFuture }],
   ['AHATextPromo', { ...AHATextPromo }],
   ['AHAHeroBanner', { ...AHAHeroBanner }],
+  ['AHAChangingTheFuture', { ...AHAChangingTheFuture }],
   ['AHACards', { ...AHACards, componentType: 'client' }],
 ]);
 

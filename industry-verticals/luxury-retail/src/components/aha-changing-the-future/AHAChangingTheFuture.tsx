@@ -20,7 +20,7 @@ const STATS = [
     value: '22 Million',
     heading: 'People trained in CPR every year',
     description:
-      '9 out of 10 people who have a cardiac arrest outside of the hospital die. If performed immediately, CPR can double or triple a person\'s chances of survival.',
+      "9 out of 10 people who have a cardiac arrest outside of the hospital die. If performed immediately, CPR can double or triple a person's chances of survival.",
   },
 ];
 
