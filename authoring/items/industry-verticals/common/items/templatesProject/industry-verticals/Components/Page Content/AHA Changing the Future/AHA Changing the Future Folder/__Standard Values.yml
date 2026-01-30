@@ -1,0 +1,37 @@
+---
+ID: "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"
+Parent: "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f"
+Template: "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Changing the Future/AHA Changing the Future Folder/__Standard Values"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/16x16/folder.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{B2C3D4E5-F6A7-4B8C-9D0E-1F2A3B4C5D6E}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "00000000-0000-0000-0000-000000000007"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260127T140000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00000000-0000-0000-0000-000000000008"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260127T140000Z
