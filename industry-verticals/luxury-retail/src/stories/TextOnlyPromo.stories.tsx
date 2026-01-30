@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Default as TextOnlyPromo } from '../components/text-only-promo/TextOnlyPromo';
-import { baseParams, baseRendering } from './common/commonData';
+import { CommonParams, CommonRendering } from './common/commonData';
 
 const meta = {
   title: 'Components/TextOnlyPromo',
@@ -30,6 +30,6 @@ const createTextOnlyPromoFields = () => ({
 export const Default: Story = {
   render: () => {
     const fields = createTextOnlyPromoFields();
-    return <TextOnlyPromo params={baseParams} rendering={baseRendering} fields={fields} />;
+    return <TextOnlyPromo params={CommonParams} rendering={CommonRendering} fields={fields} />;
   },
 };
