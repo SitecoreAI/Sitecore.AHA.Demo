@@ -1,8 +1,15 @@
 ---
-ID: "8f3a1e2b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"
-Parent: "05483f55-5f80-4501-8e88-0635c8401cbc"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Text Promo"
+ID: "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e"
+Parent: "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Text Promo/AHA Text Promo/Data"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/window_dialog.png
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "00000000-0000-0000-0000-000000000007"
 Languages:
 - Language: en
   Versions:
@@ -17,7 +24,7 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "00000000-0000-0000-0000-000000000001"
+      Value: "00000000-0000-0000-0000-000000000008"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
