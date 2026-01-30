@@ -1,0 +1,30 @@
+---
+ID: "4f5a6b7c-8d9e-0f1a-2b3c-4d5e6f7a8b9c"
+Parent: "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b"
+Template: "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/Text-Only Promo/Text-Only Promo Folder/__Standard Values"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/16x16/folder.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{9A0B1C2D-3E4F-5A6B-7C8D-9E0F1A2B3C4D}"
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: 
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a7b8c9d0-e1f2-3456-0123-456789abcdef"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260127T000000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

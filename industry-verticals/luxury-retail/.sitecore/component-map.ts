@@ -6,6 +6,7 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 import * as Title from 'src/components/title/Title';
 import * as ThemeEditor from 'src/components/theme-editor/ThemeEditor';
+import * as TextOnlyPromo from 'src/components/text-only-promo/TextOnlyPromo';
 import * as SocialFollow from 'src/components/social-follow/SocialFollow';
 import * as SocialFeed from 'src/components/social-feed/SocialFeed';
 import * as SelectedProducts from 'src/components/selected-products/SelectedProducts';
@@ -40,6 +41,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Form', Form],
   ['Title', { ...Title }],
   ['ThemeEditor', { ...ThemeEditor }],
+  ['TextOnlyPromo', { ...TextOnlyPromo }],
   ['SocialFollow', { ...SocialFollow }],
   ['SocialFeed', { ...SocialFeed }],
   ['SelectedProducts', { ...SelectedProducts }],
