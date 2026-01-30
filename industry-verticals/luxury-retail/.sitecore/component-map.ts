@@ -23,6 +23,7 @@ import * as NavigationIcons from 'src/components/navigation-icons/NavigationIcon
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as LanguageSwitcher from 'src/components/language-switcher/LanguageSwitcher';
+import * as InThisSection from 'src/components/in-this-section/InThisSection';
 import * as Image from 'src/components/image/Image';
 import * as HeroBanner from 'src/components/hero-banner/HeroBanner';
 import * as Header from 'src/components/header/Header';
@@ -58,6 +59,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['LanguageSwitcher', { ...LanguageSwitcher, componentType: 'client' }],
+  ['InThisSection', { ...InThisSection }],
   ['Image', { ...Image }],
   ['HeroBanner', { ...HeroBanner }],
   ['Header', { ...Header, componentType: 'client' }],
