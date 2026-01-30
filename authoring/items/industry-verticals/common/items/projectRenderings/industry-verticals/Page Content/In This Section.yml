@@ -9,7 +9,7 @@ SharedFields:
   Value: InThisSection
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/layout_3_blocks.png
+  Value: Applications/32x32/scroll.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: "/sitecore/templates/Project/industry-verticals/Components/Page Content/In This Section/In This Section"
