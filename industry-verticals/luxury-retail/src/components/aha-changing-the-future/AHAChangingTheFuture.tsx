@@ -32,9 +32,13 @@ export const Default = (props: AHAChangingTheFutureProps): JSX.Element => {
 
   return (
     <section
-      className={`component aha-changing-the-future py-12 lg:py-20 ${styles}`}
+      className={`component aha-changing-the-future w-screen py-12 lg:py-20 ${styles}`}
       id={id ? id : undefined}
-      style={{ backgroundColor: AHA_RED }}
+      style={{
+        backgroundColor: AHA_RED,
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)',
+      }}
     >
       <div className="mx-auto max-w-[1170px] px-4">
         {/* Title */}
@@ -55,14 +59,14 @@ export const Default = (props: AHAChangingTheFutureProps): JSX.Element => {
           {STATS.map((stat, index) => (
             <div key={index} className="flex flex-col">
               <span className="mb-2 text-3xl font-bold text-white lg:text-4xl">{stat.value}</span>
-              <h3 className="mb-4 font-bold text-white">{stat.heading}</h3>
-              <p className="text-white opacity-90">{stat.description}</p>
+              <h3 className="mb-4 text-sm font-bold text-white lg:text-base">{stat.heading}</h3>
+              <p className="text-sm text-white opacity-90 lg:text-base">{stat.description}</p>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
-        <div className="flex justify-start">
+        <div className="flex justify-center">
           <a
             href="#"
             className="inline-flex items-center justify-center rounded-full border-2 border-white bg-white px-8 py-3 font-medium text-[#c10e21] transition-colors hover:border-white hover:bg-[#c10e21] hover:text-white"
