@@ -58,10 +58,12 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
             return (
               <div key={index} className="group cursor-pointer">
                 {/* Image */}
-                <div className="mb-4 overflow-hidden rounded-lg">
+                <div className="mb-4 aspect-[3/2] w-full overflow-hidden rounded-lg">
                   <ContentSdkImage
                     field={item.image}
-                    className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={360}
+                    height={240}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
 
