@@ -24,11 +24,18 @@ export type InThisSectionProps = ComponentProps & {
 };
 
 export const Default = (props: InThisSectionProps): JSX.Element => {
-  const { params, fields } = props;
+  const { params, fields, rendering } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
   // Hide Title: checkbox param (Design tab) or hide-title style
-  const hideTitle = isParamEnabled(params?.HideTitle) || styles?.includes('hide-title');
+  // Params may use "HideTitle" or "Hide Title" depending on serialization
+  const hideTitleParam =
+    params?.HideTitle ??
+    params?.['Hide Title'] ??
+    rendering?.params?.HideTitle ??
+    rendering?.params?.['Hide Title'] ??
+    '';
+  const hideTitle = isParamEnabled(hideTitleParam) || styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 

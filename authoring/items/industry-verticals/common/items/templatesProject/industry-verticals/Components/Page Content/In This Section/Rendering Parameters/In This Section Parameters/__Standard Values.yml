@@ -4,6 +4,9 @@ Parent: "91a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c"
 Template: "91a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c"
 Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/In This Section/Rendering Parameters/In This Section Parameters/__Standard Values"
 SharedFields:
+- ID: "4be2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a"
+  Hint: HideTitle
+  Value: 0
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "00000000-0000-0000-0000-000000000057"
