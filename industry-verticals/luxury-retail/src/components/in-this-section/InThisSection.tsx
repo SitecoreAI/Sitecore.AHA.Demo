@@ -28,7 +28,13 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const id =
     typeof params?.RenderingIdentifier === 'string' ? params.RenderingIdentifier : undefined;
   const styles = typeof params?.styles === 'string' ? params.styles : '';
-  const hideTitle = styles?.includes(InThisSectionStyles.HideTitle);
+  // Show Title: checkbox (1=show, ""=hide) takes precedence; else use hide-title style
+  const showTitleCheckbox = params?.ShowTitle;
+  const hideTitleStyle = styles?.includes(InThisSectionStyles.HideTitle);
+  const showTitle =
+    showTitleCheckbox !== undefined && showTitleCheckbox !== ''
+      ? showTitleCheckbox === '1'
+      : !hideTitleStyle;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
@@ -41,8 +47,8 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   return (
     <section className={`component in-this-section py-10 lg:py-16 ${styles}`} id={id ?? undefined}>
       <div className="mx-auto max-w-[1170px] px-4">
-        {/* Title - hidden when Hide Title style is selected in Styling section (Promo pattern) */}
-        {!hideTitle && (
+        {/* Title - hidden when Show Title unchecked or Hide Title style selected */}
+        {showTitle && (
           <>
             <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
               <ContentSdkText field={fields.Title} />
