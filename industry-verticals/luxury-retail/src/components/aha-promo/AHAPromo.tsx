@@ -7,7 +7,6 @@ import {
   Link,
   LinkField,
   RichTextField,
-  Text,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
@@ -48,7 +47,7 @@ export const Default = (props: AHAPromoProps): JSX.Element => {
           {/* Text - stacked below image on mobile, left on desktop */}
           <div className="order-2 flex flex-col items-start text-left lg:order-1">
             <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-              <Text field={props.fields.PromoTitle} />
+              {String(props.fields.PromoTitle?.value ?? '')}
             </h2>
             <div className="space-y-6">
               <div className="text-foreground text-base leading-relaxed lg:text-lg">

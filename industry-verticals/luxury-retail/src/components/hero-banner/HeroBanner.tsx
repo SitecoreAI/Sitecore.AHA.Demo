@@ -2,7 +2,6 @@ import {
   Field,
   ImageField,
   NextImage as ContentSdkImage,
-  Text as ContentSdkText,
   RichText as ContentSdkRichText,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
@@ -94,7 +93,7 @@ export const Default = ({ params, fields, rendering }: HeroBannerProps) => {
           >
             <div>
               <h1 className="font-heading text-background-muted text-4xl tracking-tight capitalize lg:text-7xl">
-                <ContentSdkText field={fields.Title} />
+                {String(fields.Title?.value ?? '')}
               </h1>
 
               <div className="text-background-muted text-md lg:text-xl">
@@ -124,7 +123,7 @@ export const TopContent = ({ params, fields, rendering }: HeroBannerProps) => {
           >
             <div className="">
               <h1 className="font-heading text-background-muted text-4xl tracking-tight capitalize lg:text-7xl">
-                <ContentSdkText field={fields.Title} />
+                {String(fields.Title?.value ?? '')}
               </h1>
 
               <div className="text-background-muted text-md lg:text-xl">
