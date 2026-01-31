@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Default as InThisSection } from '../components/in-this-section/InThisSection';
 import { CommonParams, CommonRendering } from './common/commonData';
-import { InThisSectionStyles } from '@/types/styleFlags';
+import { boolToSitecoreCheckbox } from './helpers/boolToSitecoreCheckbox';
 
 const meta = {
   title: 'Components/InThisSection',
@@ -53,7 +53,7 @@ export const WithoutTitle: Story = {
       <InThisSection
         params={{
           ...CommonParams,
-          styles: `${CommonParams.styles || ''} ${InThisSectionStyles.HideTitle}`,
+          HideTitle: boolToSitecoreCheckbox(true),
         }}
         rendering={CommonRendering}
         fields={fields}

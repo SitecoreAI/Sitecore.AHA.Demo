@@ -7,7 +7,7 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { InThisSectionStyles } from '@/types/styleFlags';
+import { isParamEnabled } from '@/helpers/isParamEnabled';
 
 interface Fields {
   Title: Field<string>;
@@ -27,8 +27,8 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  // Hide Title: style (like Promo Reversed) - when "hide-title" is in styles, hide the title
-  const hideTitle = styles?.includes(InThisSectionStyles.HideTitle);
+  // Hide Title: checkbox param (Design tab) or hide-title style
+  const hideTitle = isParamEnabled(params?.HideTitle) || styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
