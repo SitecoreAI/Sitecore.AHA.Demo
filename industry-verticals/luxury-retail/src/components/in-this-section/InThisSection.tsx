@@ -26,6 +26,8 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  // Show title when checkbox is checked (1) or when param is unset (backward compat). Hide when unchecked (0).
+  const showTitle = (props.params?.ShowTitle ?? '1') !== '0';
 
   const topics = [
     { topic: props.fields.Topic1, image: props.fields.Image1 },
@@ -39,13 +41,17 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        {/* Title */}
-        <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-          <ContentSdkText field={props.fields.Title} />
-        </h2>
+        {/* Title - only shown when Show Title checkbox is checked */}
+        {showTitle && (
+          <>
+            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
+              <ContentSdkText field={props.fields.Title} />
+            </h2>
 
-        {/* Separator line */}
-        <div className="border-foreground-light mb-8 border-t" />
+            {/* Separator line */}
+            <div className="border-foreground-light mb-8 border-t" />
+          </>
+        )}
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

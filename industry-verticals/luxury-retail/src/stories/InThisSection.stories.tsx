@@ -44,3 +44,16 @@ export const Default: Story = {
     return <InThisSection params={CommonParams} rendering={CommonRendering} fields={fields} />;
   },
 };
+
+export const WithoutTitle: Story = {
+  render: () => {
+    const fields = createInThisSectionFields();
+    return (
+      <InThisSection
+        params={{ ...CommonParams, ShowTitle: '0' }}
+        rendering={CommonRendering}
+        fields={fields}
+      />
+    );
+  },
+};
