@@ -32,12 +32,8 @@ export const Default = (props: AHAHealthTopicBannerProps): JSX.Element => {
 
   return (
     <section
-      className={`component aha-health-topic-banner w-screen py-10 lg:py-16 ${styles}`}
+      className={`component aha-health-topic-banner w-full py-10 lg:py-16 ${styles}`}
       id={id ?? undefined}
-      style={{
-        marginLeft: 'calc(-50vw + 50%)',
-        marginRight: 'calc(-50vw + 50%)',
-      }}
     >
       <div className="mx-auto w-full max-w-[1170px] px-4">
         <div className="flex flex-col items-start text-left">
@@ -51,8 +47,8 @@ export const Default = (props: AHAHealthTopicBannerProps): JSX.Element => {
 
           {/* Two columns: on mobile Image first, then text; on desktop text left, image right */}
           <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Text block - Subtitle, Copy, Link */}
-            <div className="order-2 flex flex-col gap-4 lg:order-1">
+            {/* Text block - Subtitle, Copy, Link - vertically centered with image on desktop */}
+            <div className="order-2 flex flex-col justify-center gap-4 lg:order-1">
               <h2 className="text-foreground text-lg font-bold lg:text-xl">
                 <ContentSdkText field={props.fields.Subtitle} />
               </h2>
@@ -69,13 +65,15 @@ export const Default = (props: AHAHealthTopicBannerProps): JSX.Element => {
               )}
             </div>
 
-            {/* Image - first on mobile (below line), right on desktop */}
+            {/* Image - 570x485, first on mobile (below line), right on desktop */}
             {(props.fields.Image?.value?.src || isPageEditing) && (
               <div className="order-1 lg:order-2">
-                <div className="overflow-hidden rounded-lg">
+                <div className="aspect-[570/485] max-w-[570px] overflow-hidden rounded-lg">
                   <ContentSdkImage
                     field={props.fields.Image}
-                    className="h-auto w-full object-cover"
+                    width={570}
+                    height={485}
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </div>
