@@ -5,3 +5,7 @@ export enum CommonStyles {
 export enum HeroBannerStyles {
   HideGradientOverlay = 'hide-gradient-overlay',
 }
+
+export enum InThisSectionStyles {
+  HideTitle = 'hide-title',
+}
