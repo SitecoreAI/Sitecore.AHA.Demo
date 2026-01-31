@@ -25,7 +25,8 @@ export type InThisSectionProps = ComponentProps & {
 
 export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
-  const id = typeof params?.RenderingIdentifier === 'string' ? params.RenderingIdentifier : undefined;
+  const id =
+    typeof params?.RenderingIdentifier === 'string' ? params.RenderingIdentifier : undefined;
   const styles = typeof params?.styles === 'string' ? params.styles : '';
   const hideTitle = styles?.includes(InThisSectionStyles.HideTitle);
   const { page } = useSitecore();
@@ -38,10 +39,7 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   ];
 
   return (
-    <section
-      className={`component in-this-section py-10 lg:py-16 ${styles}`}
-      id={id ?? undefined}
-    >
+    <section className={`component in-this-section py-10 lg:py-16 ${styles}`} id={id ?? undefined}>
       <div className="mx-auto max-w-[1170px] px-4">
         {/* Title - hidden when Hide Title style is selected in Styling section (Promo pattern) */}
         {!hideTitle && (
