@@ -16,8 +16,6 @@ type Story = StoryObj<typeof AHAPromo>;
 
 const createAHAPromoFields = () => ({
   PromoImageOne: createImageField('placeholder'),
-  PromoImageTwo: createImageField('placeholder'),
-  PromoImageThree: createImageField('placeholder'),
   PromoTitle: createTextField('Get ready for National Wear Red Day® on Feb. 6'),
   PromoDescription: {
     value:
