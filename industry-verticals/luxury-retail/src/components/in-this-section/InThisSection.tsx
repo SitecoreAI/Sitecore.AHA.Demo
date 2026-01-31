@@ -25,9 +25,8 @@ export type InThisSectionProps = ComponentProps & {
 
 export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
-  const id =
-    typeof params?.RenderingIdentifier === 'string' ? params.RenderingIdentifier : undefined;
-  const styles = typeof params?.styles === 'string' ? params.styles : '';
+  const id = params?.RenderingIdentifier;
+  const styles = params?.styles || '';
   // Show Title: checkbox (1=show, ""=hide) takes precedence; else use hide-title style
   const showTitleCheckbox = params?.ShowTitle;
   const hideTitleStyle = styles?.includes(InThisSectionStyles.HideTitle);
@@ -45,25 +44,36 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   ];
 
   return (
-    <section className={`component in-this-section py-10 lg:py-16 ${styles}`} id={id ?? undefined}>
+    <section
+      className={`component in-this-section py-10 lg:py-16 ${styles}`}
+      id={id ? id : undefined}
+    >
       <div className="mx-auto max-w-[1170px] px-4">
-        {/* Title - hidden when Show Title unchecked or Hide Title style selected */}
-        {showTitle && (
+        {/* Title - always rendered in edit mode for Page Builder selection; hidden on publish when showTitle is false */}
+        {(showTitle || isPageEditing) && (
           <>
-            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
+            <h2
+              className={`text-foreground mb-4 text-2xl font-bold lg:text-3xl ${
+                !showTitle && isPageEditing ? 'opacity-60' : ''
+              }`}
+            >
               <ContentSdkText field={fields.Title} />
             </h2>
-            <div className="border-foreground-light mb-8 border-t" />
+            <div
+              className={`border-foreground-light mb-8 border-t ${
+                !showTitle && isPageEditing ? 'opacity-60' : ''
+              }`}
+            />
           </>
         )}
 
-        {/* Cards Grid */}
+        {/* Cards Grid - in edit mode always render at least one card slot so component has clickable area */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {topics.map((item, index) => {
             const hasImage = item.image?.value?.src || isPageEditing;
             const hasTopic = item.topic?.value || isPageEditing;
 
-            if (!hasImage && !hasTopic) return null;
+            if (!hasImage && !hasTopic && !isPageEditing) return null;
 
             return (
               <div key={index} className="group cursor-pointer">
