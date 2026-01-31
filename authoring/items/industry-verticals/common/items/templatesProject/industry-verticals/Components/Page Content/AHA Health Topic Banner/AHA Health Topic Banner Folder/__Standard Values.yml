@@ -1,0 +1,37 @@
+---
+ID: "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"
+Parent: "b3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
+Template: "b3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
+Path: "/sitecore/templates/Project/industry-verticals/Components/Page Content/AHA Health Topic Banner/AHA Health Topic Banner Folder/__Standard Values"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/note_text.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{a2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "00000000-0000-0000-0000-000000000038"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260127T140000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00000000-0000-0000-0000-000000000039"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260127T140000Z
