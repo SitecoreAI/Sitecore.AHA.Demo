@@ -27,13 +27,8 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  // Show Title: checkbox (1=show, ""=hide) takes precedence; else use hide-title style
-  const showTitleCheckbox = params?.ShowTitle;
-  const hideTitleStyle = styles?.includes(InThisSectionStyles.HideTitle);
-  const showTitle =
-    showTitleCheckbox !== undefined && showTitleCheckbox !== ''
-      ? showTitleCheckbox === '1'
-      : !hideTitleStyle;
+  // Hide Title: style (like Promo Reversed) - when "hide-title" is in styles, hide the title
+  const hideTitle = styles?.includes(InThisSectionStyles.HideTitle);
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
@@ -49,19 +44,19 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        {/* Title - always rendered in edit mode for Page Builder selection; hidden on publish when showTitle is false */}
-        {(showTitle || isPageEditing) && (
+        {/* Title - hidden when Hide Title style selected (Design > Styling); always shown in edit mode for selection */}
+        {(!hideTitle || isPageEditing) && (
           <>
             <h2
               className={`text-foreground mb-4 text-2xl font-bold lg:text-3xl ${
-                !showTitle && isPageEditing ? 'opacity-60' : ''
+                hideTitle && isPageEditing ? 'opacity-60' : ''
               }`}
             >
               <ContentSdkText field={fields.Title} />
             </h2>
             <div
               className={`border-foreground-light mb-8 border-t ${
-                !showTitle && isPageEditing ? 'opacity-60' : ''
+                hideTitle && isPageEditing ? 'opacity-60' : ''
               }`}
             />
           </>
