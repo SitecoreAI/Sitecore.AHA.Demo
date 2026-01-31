@@ -2,6 +2,7 @@ import React, { JSX } from 'react';
 import {
   NextImage as ContentSdkImage,
   RichText as ContentSdkRichText,
+  Text as ContentSdkText,
   Field,
   ImageField,
   Link,
@@ -47,7 +48,7 @@ export const Default = (props: AHAPromoProps): JSX.Element => {
           {/* Text - stacked below image on mobile, left on desktop */}
           <div className="order-2 flex flex-col items-start text-left lg:order-1">
             <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-              {String(props.fields.PromoTitle?.value ?? '')}
+              <ContentSdkText field={props.fields.PromoTitle} />
             </h2>
             <div className="space-y-6">
               <div className="text-foreground text-base leading-relaxed lg:text-lg">
@@ -59,11 +60,8 @@ export const Default = (props: AHAPromoProps): JSX.Element => {
               <div className="mt-6 flex justify-start">
                 <Link
                   field={props.fields.PromoMoreInfo}
-                  className="inline-flex items-center gap-1 font-medium text-[#c10e21] hover:underline"
-                >
-                  {props.fields.PromoMoreInfo.value?.text ?? 'Shop'}
-                  <span aria-hidden="true">&gt;</span>
-                </Link>
+                  className="inline-flex items-center font-medium text-[#c10e21] hover:underline"
+                />
               </div>
             )}
           </div>

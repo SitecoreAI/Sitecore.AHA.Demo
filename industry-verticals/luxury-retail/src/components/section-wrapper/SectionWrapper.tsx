@@ -1,5 +1,11 @@
 import { ComponentProps } from '@/lib/component-props';
-import { Field, Link, LinkField, Placeholder } from '@sitecore-content-sdk/nextjs';
+import {
+  Field,
+  Link,
+  LinkField,
+  Placeholder,
+  Text as ContentSdkText,
+} from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Title: Field<string>;
@@ -21,8 +27,12 @@ export const Default = ({ params, fields, rendering }: SectionWrapperProps) => {
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-4">
           <div className="space-y-8 lg:col-span-3">
-            <h2>{String(fields.Title?.value ?? '')}</h2>
-            <p className="text-xl">{String(fields.Description?.value ?? '')}</p>
+            <h2>
+              <ContentSdkText field={fields.Title} />
+            </h2>
+            <p className="text-xl">
+              <ContentSdkText field={fields.Description} />
+            </p>
             <Link field={fields.Link} className="outline-btn justify-self-start" />
           </div>
           <div className="max-lg:order-last">

@@ -1,8 +1,8 @@
 import React, { JSX } from 'react';
 import {
-  RichText as ContentSdkRichText,
   Link,
   LinkField,
+  RichText as ContentSdkRichText,
   RichTextField,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';

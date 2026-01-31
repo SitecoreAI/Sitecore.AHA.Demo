@@ -1,6 +1,7 @@
 import React, { JSX } from 'react';
 import {
   NextImage as ContentSdkImage,
+  Text as ContentSdkText,
   Field,
   ImageField,
   useSitecore,
@@ -40,7 +41,7 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
       <div className="mx-auto max-w-[1170px] px-4">
         {/* Title */}
         <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-          {String(props.fields.Title?.value ?? '')}
+          <ContentSdkText field={props.fields.Title} />
         </h2>
 
         {/* Separator line */}
@@ -68,7 +69,7 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
 
                 {/* Topic Title */}
                 <h3 className="text-foreground text-lg font-semibold">
-                  {String(item.topic?.value ?? '')}
+                  <ContentSdkText field={item.topic} />
                 </h3>
               </div>
             );

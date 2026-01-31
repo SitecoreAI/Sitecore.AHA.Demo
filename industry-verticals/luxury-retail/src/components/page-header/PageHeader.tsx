@@ -1,6 +1,7 @@
 import React, { JSX } from 'react';
 import {
   RichText,
+  Text as ContentSdkText,
   useSitecore,
   RichTextField,
   TextField,
@@ -30,7 +31,9 @@ export const Default = ({ params, fields, rendering }: PageContentProps): JSX.El
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-4">
           <div className="space-y-8 lg:col-span-3">
-            <h2>{String(title?.value ?? '')}</h2>
+            <h2>
+              <ContentSdkText field={title} />
+            </h2>
             <div className="text-lg">
               <RichText field={content} />
             </div>

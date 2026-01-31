@@ -7,6 +7,9 @@ SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
   Value: AHATextPromo
+- ID: "069a8361-b1cd-437c-8c32-a3be78941446"
+  Hint: Placeholders
+  Value: "{2ED0D913-4733-472B-9BA8-5C149145C14C}"
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: Office/32x32/document_text.png
@@ -19,6 +22,9 @@ SharedFields:
 - ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
   Hint: __Read Only
   Value: 
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{E3A40241-78DA-4435-B1AB-B8C641F035D9}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:$site/*[@@name='Data']/*[@@templatename='AHA Text Promo Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='AHA Text Promo Folder']"
@@ -28,6 +34,9 @@ SharedFields:
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "00000000-0000-0000-0000-000000000018"
+- ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
+  Hint: OtherProperties
+  Value: IsRenderingsWithDynamicPlaceholders=true
 Languages:
 - Language: en
   Fields:
