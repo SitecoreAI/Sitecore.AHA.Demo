@@ -7,7 +7,6 @@ import {
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
-import { isParamEnabled } from '@/helpers/isParamEnabled';
 
 interface Fields {
   Title: Field<string>;
@@ -28,7 +27,12 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  const hideTitle = isParamEnabled(fields?.HideTitle?.value) || styles?.includes('hide-title');
+  const hideTitleVal = fields?.HideTitle?.value;
+  const hideTitle =
+    hideTitleVal === '1' ||
+    hideTitleVal === true ||
+    String(hideTitleVal).toLowerCase() === 'true' ||
+    styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
