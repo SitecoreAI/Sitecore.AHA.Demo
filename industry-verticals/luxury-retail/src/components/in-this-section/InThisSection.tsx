@@ -11,6 +11,7 @@ import { isParamEnabled } from '@/helpers/isParamEnabled';
 
 interface Fields {
   Title: Field<string>;
+  HideTitle: Field<string>;
   Topic1: Field<string>;
   Topic2: Field<string>;
   Topic3: Field<string>;
@@ -27,15 +28,16 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields, rendering } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  // Hide Title: checkbox param (Design tab) or hide-title style
-  // Params may use "HideTitle" or "Hide Title" depending on serialization
+  // Hide Title: datasource field (Content tab) - reliable; or param/style as fallback
+  const hideTitleFromField = isParamEnabled(fields?.HideTitle?.value);
   const hideTitleParam =
     params?.HideTitle ??
     params?.['Hide Title'] ??
     rendering?.params?.HideTitle ??
     rendering?.params?.['Hide Title'] ??
     '';
-  const hideTitle = isParamEnabled(hideTitleParam) || styles?.includes('hide-title');
+  const hideTitle =
+    hideTitleFromField || isParamEnabled(hideTitleParam) || styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 

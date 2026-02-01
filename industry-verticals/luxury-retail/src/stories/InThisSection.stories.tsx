@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Default as InThisSection } from '../components/in-this-section/InThisSection';
 import { CommonParams, CommonRendering } from './common/commonData';
-import { boolToSitecoreCheckbox } from './helpers/boolToSitecoreCheckbox';
 
 const meta = {
   title: 'Components/InThisSection',
@@ -14,8 +13,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InThisSection>;
 
-const createInThisSectionFields = () => ({
+const createInThisSectionFields = (hideTitle = false) => ({
   Title: { value: 'In this Section' },
+  HideTitle: { value: hideTitle ? '1' : '' },
   Topic1: { value: 'Eat Smart' },
   Topic2: { value: 'Losing Weight' },
   Topic3: { value: 'Cooking Skills' },
@@ -48,16 +48,7 @@ export const Default: Story = {
 
 export const WithoutTitle: Story = {
   render: () => {
-    const fields = createInThisSectionFields();
-    return (
-      <InThisSection
-        params={{
-          ...CommonParams,
-          HideTitle: boolToSitecoreCheckbox(true),
-        }}
-        rendering={CommonRendering}
-        fields={fields}
-      />
-    );
+    const fields = createInThisSectionFields(true);
+    return <InThisSection params={CommonParams} rendering={CommonRendering} fields={fields} />;
   },
 };
