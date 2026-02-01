@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Walk - Google Search</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #202124;
+        background: #fff;
+        min-height: 100vh;
+      }
+      a {
+        text-decoration: none;
+        color: #1a0dab;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Top nav */
+      .topnav {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px 8px 24px;
+        gap: 24px;
+        flex-wrap: wrap;
+        background: #fff;
+      }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .logo-wrap img {
+        height: 30px;
+        width: auto;
+      }
+      .search-wrap {
+        flex: 1;
+        min-width: 0;
+        max-width: 692px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #dfe1e5;
+        border-radius: 24px;
+        padding: 0 16px;
+        height: 44px;
+      }
+      .search-wrap:hover {
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      }
+      .search-wrap input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 0 12px;
+      }
+      .search-wrap button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: #4285f4;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        margin-left: auto;
+        padding-right: 16px;
+      }
+      .nav-right .icon-btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5f6368;
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .nav-right .icon-btn:hover {
+        background: #f1f3f4;
+        text-decoration: none;
+      }
+      .nav-right .profile-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+      }
+      .nav-right .icon-btn img {
+        width: 32px;
+        height: 26px;
+        object-fit: cover;
+        object-position: 50% 0;
+        display: block;
+        text-decoration: none;
+        border: none;
+        vertical-align: middle;
+      }
+      .nav-right .icon-btn.profile-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 38%;
+        border-radius: 50%;
+      }
+
+      /* Search tabs */
+      .search-tabs {
+        display: flex;
+        gap: 24px;
+        padding: 0 24px 0 180px;
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 0;
+      }
+      .search-tabs a {
+        color: #5f6368;
+        padding: 12px 0;
+        font-size: 14px;
+      }
+      .search-tabs a.active {
+        color: #1a73e8;
+        border-bottom: 3px solid #1a73e8;
+        margin-bottom: -1px;
+      }
+
+      /* Results */
+      .results-wrap {
+        max-width: 852px;
+        padding: 0 24px 120px 180px;
+      }
+      .location-note {
+        font-size: 14px;
+        color: #70757a;
+        padding: 12px 0;
+      }
+      .location-note a {
+        color: #1a73e8;
+      }
+      .location-note .btn-location {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid #dadce0;
+        background: #fff;
+        color: #1a73e8;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      .location-note .btn-location:hover {
+        background: #f8f9fa;
+        text-decoration: none;
+      }
+      .result-block {
+        margin-bottom: 24px;
+      }
+      .hide-sponsored-wrap {
+        position: relative;
+        margin: 20px 0;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hide-sponsored-wrap::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -1px;
+        border-top: 1px solid #ebebeb;
+      }
+      .hide-sponsored-btn {
+        background: #fff;
+        padding: 6px 14px;
+        border-radius: 18px;
+        border: 1px solid #dadce0;
+        font-size: 13px;
+        color: #4d5156;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        font-family: inherit;
+      }
+      .hide-sponsored-btn:hover {
+        background: #f8f9fa;
+      }
+      .hide-sponsored-btn .up-chevron {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-left: 4px;
+        vertical-align: -2px;
+        stroke: currentColor;
+      }
+      .sponsored-label {
+        font-size: 12px;
+        color: #5f6368;
+        margin-bottom: 4px;
+      }
+      .result-url {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .result-url .url-text {
+        color: #5f6368;
+      }
+      .result-sponsored-meta {
+        margin-bottom: 4px;
+        display: flex;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .result-sponsored-meta .meta-favicon {
+        width: 36px;
+        height: 36px;
+        min-height: 36px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .result-sponsored-meta .meta-favicon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .result-sponsored-meta .meta-content {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+      }
+      .result-sponsored-meta .meta-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .result-sponsored-meta .meta-domain {
+        font-size: 14px;
+        color: #202124;
+      }
+      .result-sponsored-meta .meta-menu {
+        margin-left: auto;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5f6368;
+      }
+      .result-sponsored-meta .meta-menu:hover {
+        color: #202124;
+      }
+      .result-sponsored-meta .meta-url {
+        font-size: 12px;
+        color: #1a73e8;
+        display: block;
+        text-decoration: none;
+      }
+      .result-sponsored-meta .meta-url:hover {
+        text-decoration: underline;
+      }
+      .result-title {
+        font-size: 20px;
+        font-weight: 400;
+        color: #1a0dab;
+        margin-bottom: 4px;
+      }
+      .result-title:hover {
+        text-decoration: underline;
+      }
+      .result-desc {
+        font-size: 14px;
+        color: #4d5156;
+        line-height: 1.58;
+      }
+      .result-sublinks {
+        margin-top: 16px;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .result-sublink-block {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        text-decoration: none;
+        color: inherit;
+        border: none;
+        border-bottom: 1px solid #ebebeb;
+      }
+      .result-sublink-block:last-child {
+        border-bottom: none;
+      }
+      .result-sublink-block:hover {
+        text-decoration: none;
+      }
+      .result-sublink-block:hover .sublink-title {
+        text-decoration: underline;
+      }
+      .result-sublink-content {
+        flex: 1;
+        min-width: 0;
+      }
+      .result-sublink-block .sublink-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1a0dab;
+        display: block;
+        margin-bottom: 2px;
+      }
+      .result-sublink-block .sublink-desc {
+        font-size: 13px;
+        color: #4d5156;
+        line-height: 1.4;
+      }
+      .result-sublink-block .sublink-arrow {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        color: #9aa0a6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .result-item {
+        margin-bottom: 20px;
+      }
+      .result-item .result-url .url-text {
+        font-size: 12px;
+      }
+
+      /* Images section */
+      .images-section {
+        margin: 32px 0;
+      }
+      .section-label {
+        font-size: 20px;
+        font-weight: 400;
+        color: #202124;
+        margin-bottom: 16px;
+      }
+      .images-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .image-card {
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f8f9fa;
+      }
+      .image-card .img-placeholder {
+        height: 120px;
+        display: block;
+        overflow: hidden;
+        background: #e8eaed;
+      }
+      .image-card .img-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .image-card .img-caption {
+        padding: 8px;
+        font-size: 12px;
+        color: #4d5156;
+      }
+      .show-more {
+        margin-top: 16px;
+      }
+      .show-more a {
+        color: #1a73e8;
+        font-size: 14px;
+      }
+
+      /* Videos section */
+      .videos-section {
+        margin: 32px 0;
+      }
+      .videos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .video-card {
+        font-size: 14px;
+      }
+      .video-card .thumb {
+        height: 100px;
+        background: #e8eaed;
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+      .video-card .title {
+        color: #1a0dab;
+        margin-bottom: 4px;
+      }
+      .video-card .meta {
+        color: #5f6368;
+        font-size: 12px;
+      }
+
+      /* People also search for */
+      .people-also {
+        margin: 32px 0;
+      }
+      .people-also-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      .people-also-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border: 1px solid #dadce0;
+        border-radius: 24px;
+        font-size: 14px;
+        color: #202124;
+        background: #fff;
+        cursor: pointer;
+      }
+      .people-also-item:hover {
+        background: #f8f9fa;
+      }
+      .people-also-item svg {
+        width: 18px;
+        height: 18px;
+        color: #5f6368;
+      }
+
+      /* Pagination */
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 32px 0;
+        font-size: 14px;
+      }
+      .pagination .goooooogle {
+        letter-spacing: -1px;
+        color: #4285f4;
+        font-weight: 500;
+      }
+      .pagination .page-num {
+        padding: 0 12px;
+        color: #202124;
+      }
+      .pagination .page-num.current {
+        color: #1a73e8;
+      }
+
+      /* Footer */
+      .footer {
+        background: #f2f2f2;
+        padding: 16px 24px;
+        font-size: 14px;
+        color: #5f6368;
+      }
+      .footer-location {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #dadce0;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding-top: 12px;
+      }
+      .footer-links a {
+        color: #5f6368;
+      }
+      .footer-note {
+        margin-top: 12px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="#" class="logo-wrap">
+        <img src="/google_logo.png" alt="Google" />
+      </a>
+      <div class="search-wrap">
+        <input type="text" value="Heart Walk" readonly />
+        <button type="button" aria-label="Clear">×</button>
+        <button type="button" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#4285f4">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+          </svg>
+        </button>
+      </div>
+      <div class="nav-right">
+        <button class="icon-btn" type="button" aria-label="Apps"><img src="/google_menu.png" alt="" /></button>
+        <button class="icon-btn" type="button" aria-label="Lab"><img src="/google_lab.png" alt="" /></button>
+        <button class="icon-btn profile-btn" type="button" aria-label="Profile"><img src="/headshot.png" alt="" /></button>
+      </div>
+    </nav>
+    <div class="search-tabs">
+      <a href="#" class="active">All</a>
+      <a href="#">Images</a>
+      <a href="#">Videos</a>
+      <a href="#">Grouping</a>
+      <a href="#">News</a>
+      <a href="#">Shopping</a>
+      <a href="#">Maps</a>
+      <a href="#">More</a>
+    </div>
+    <div class="results-wrap">
+      <p class="location-note">Results for Armour Hills, Kansas City · <a href="#" class="btn-location" target="_blank">Use precise location</a></p>
+
+      <div class="result-block">
+        <p class="sponsored-label">Sponsored result</p>
+        <div class="result-item">
+          <div class="result-sponsored-meta">
+            <span class="meta-favicon"><img src="/aha_icon.png" alt="" /></span>
+            <div class="meta-content">
+              <div class="meta-row">
+                <span class="meta-domain">heart.org</span>
+                <button type="button" class="meta-menu" aria-label="More options">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                </button>
+              </div>
+              <a href="/?utm_campaign=heartwalk" class="meta-url">https://www.heart.org › heart_walk</a>
+            </div>
+          </div>
+          <a href="/?utm_campaign=heartwalk" class="result-title">American Heart Walk</a>
+          <p class="result-desc">Register for The Heart Walk — Help Save Yourself and Loved Ones. Sign Up For A Heart Walk Today. Register For A Heart Walk Near You Today! Once you've done training, partners, first aid, CPR.</p>
+          <div class="result-sublinks">
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Join our Newsletter</span>
+                <span class="sublink-desc">Science-backed health tips, recipes in your inbox twice a month.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Know the Warning Signs</span>
+                <span class="sublink-desc">Know the warning signs of Heart Attack, Stroke or Cardiac Arrest.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Find a CPR Class</span>
+                <span class="sublink-desc">Learn CPR and help save lives. Find a class near you.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Volunteer Today</span>
+                <span class="sublink-desc">Give your time to support heart health in your community.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Donate Now</span>
+                <span class="sublink-desc">Your gift funds research and helps save lives.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hide-sponsored-wrap">
+        <button type="button" class="hide-sponsored-btn">Hide sponsored result <svg class="up-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+      </div>
+      <div class="result-item">
+        <div class="result-sponsored-meta">
+          <span class="meta-favicon"><img src="/aha_icon.png" alt="" /></span>
+          <div class="meta-content">
+            <div class="meta-row">
+              <span class="meta-domain">heart.org</span>
+              <button type="button" class="meta-menu" aria-label="More options">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+              </button>
+            </div>
+            <a href="#" class="meta-url">https://www.heart.org › heart_walk</a>
+          </div>
+        </div>
+        <a href="#" class="result-title">2025 Kansas City Heart & Stroke Walk</a>
+        <p class="result-desc">Join the American Heart Association for the 2025 Kansas City Heart & Stroke Walk. Register, fundraise, and walk to support heart and brain health in your community.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-sponsored-meta">
+          <span class="meta-favicon"><img src="/aha_icon.png" alt="" /></span>
+          <div class="meta-content">
+            <div class="meta-row">
+              <span class="meta-domain">heart.org</span>
+              <button type="button" class="meta-menu" aria-label="More options">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+              </button>
+            </div>
+            <a href="#" class="meta-url">https://www.heart.org › heart_walk</a>
+          </div>
+        </div>
+        <a href="#" class="result-title">Heart Walks Near Your Area</a>
+        <p class="result-desc">Find a Heart Walk near you. Search by city or zip code to register for an upcoming walk and help save lives.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.chdfamilies.org</span>
+        </div>
+        <a href="#" class="result-title">AHA HEARTWALK! chat - CHD Families</a>
+        <p class="result-desc">Discussion and updates about the 2023 Heartwalk and American Heart Association events.</p>
+      </div>
+
+      <section class="images-section">
+        <h2 class="section-label">Images</h2>
+        <div class="images-grid">
+          <div class="image-card">
+            <div class="img-placeholder">
+              <img src="/aha_logo_red.png" alt="AHA logo" />
+            </div>
+            <div class="img-caption">AHA logo</div>
+          </div>
+          <div class="image-card">
+            <div class="img-placeholder">
+              <img src="/heart_walk_participants.png" alt="Heart Walk participants" />
+            </div>
+            <div class="img-caption">Heart Walk event photo</div>
+          </div>
+          <div class="image-card">
+            <div class="img-placeholder">
+              <img src="/heart_walk_logo.png" alt="American Heart Association Heart Walk" />
+            </div>
+            <div class="img-caption">American Heart Association Heart Walk</div>
+          </div>
+        </div>
+        <p class="show-more"><a href="#">Show more images</a></p>
+      </section>
+
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.heart.org</span>
+        </div>
+        <a href="#" class="result-title">Annual Heart Walk KC brings community and survivors...</a>
+        <p class="result-desc">The Kansas City Heart Walk brings together survivors, families, and community partners to raise funds and awareness for heart and stroke research.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.heart.org</span>
+        </div>
+        <a href="#" class="result-title">2025 Kansas City Heart & Stroke Walk</a>
+        <p class="result-desc">Register today for the Kansas City Heart & Stroke Walk. Choose your distance, form a team, and help fund life-saving research.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.facebook.com</span>
+        </div>
+        <a href="#" class="result-title">Join us for the KC Heart Walk on Saturday, September 27...</a>
+        <p class="result-desc">Facebook event for the Kansas City Heart Walk. Invite friends and family to walk with you.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.childrensheartfoundation.org</span>
+        </div>
+        <a href="#" class="result-title">The CDC - The Children's Heart Foundation: Congenital Heart Walk</a>
+        <p class="result-desc">Congenital Heart Walk events supporting the Children's Heart Foundation.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-url">
+          <span class="url-text">https://www.universityofkansas.edu</span>
+        </div>
+        <a href="#" class="result-title">What is American Heart Walk</a>
+        <p class="result-desc">Learn about the American Heart Association's Heart Walk program and how it supports cardiovascular research and community health.</p>
+      </div>
+
+      <section class="videos-section">
+        <h2 class="section-label">Videos</h2>
+        <div class="videos-grid">
+          <div class="video-card">
+            <div class="thumb"></div>
+            <div class="title">Join Heart Walk - A Community of Lifesavers</div>
+            <div class="meta">YouTube · American Heart Association · Jun 12, 2024</div>
+          </div>
+          <div class="video-card">
+            <div class="thumb"></div>
+            <div class="title">The American Heart Association invites you to join a Heart Walk</div>
+            <div class="meta">YouTube · American Heart Association · Sep 5, 2024</div>
+          </div>
+          <div class="video-card">
+            <div class="thumb"></div>
+            <div class="title">Ever wonder what it takes to make a Heart Walk happen? It's...</div>
+            <div class="meta">YouTube · American Heart Association · Nov 15, 2023</div>
+          </div>
+        </div>
+        <p class="show-more"><a href="#">View all</a></p>
+      </section>
+
+      <div class="result-block">
+        <p class="sponsored-label">Sponsored result</p>
+        <div class="result-item">
+          <div class="result-sponsored-meta">
+            <span class="meta-favicon"><img src="/aha_icon.png" alt="" /></span>
+            <div class="meta-content">
+              <div class="meta-row">
+                <span class="meta-domain">heart.org</span>
+                <button type="button" class="meta-menu" aria-label="More options">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                </button>
+              </div>
+              <a href="/?utm_campaign=heartwalk" class="meta-url">https://www.heart.org › heart_walk</a>
+            </div>
+          </div>
+          <a href="/?utm_campaign=heartwalk" class="result-title">American Heart Walk</a>
+          <p class="result-desc">Register for The Heart Walk — Help Save Yourself and Loved Ones. Sign Up For A Heart Walk Today.</p>
+          <div class="result-sublinks">
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Donate Now</span>
+                <span class="sublink-desc">Your gift funds research and helps save lives.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#" class="result-sublink-block">
+              <span class="result-sublink-content">
+                <span class="sublink-title">Volunteer Today</span>
+                <span class="sublink-desc">Give your time to support heart health in your community.</span>
+              </span>
+              <svg class="sublink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hide-sponsored-wrap">
+        <button type="button" class="hide-sponsored-btn">Hide sponsored result <svg class="up-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+      </div>
+      <section class="people-also">
+        <h2 class="section-label">People also search for</h2>
+        <div class="people-also-grid">
+          <div class="people-also-item">
+            <span>kc heart walk</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>American Heart Association</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>American heart walk 2025</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>Heart Walk 2025 schedule</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>American Heart Association Walk 2023</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>Heart Walk login</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>Heart Walk near me</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="people-also-item">
+            <span>Heart Walk registration</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <nav class="pagination">
+        <span class="goooooogle">Goooooooooogle</span>
+        <span class="page-num current">1</span>
+        <span class="page-num">2</span>
+        <span class="page-num">3</span>
+        <span class="page-num">4</span>
+        <span class="page-num">5</span>
+        <span class="page-num">6</span>
+        <span class="page-num">7</span>
+        <span class="page-num">8</span>
+        <span class="page-num">9</span>
+        <span class="page-num">10</span>
+        <span style="margin-left: 8px;">›</span>
+      </nav>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-location">Armour Hills, Kansas City, MO</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+      <div class="footer-note">Results are personalized. <a href="#">Turn off personalization</a></div>
+    </footer>
+  </body>
+</html>
