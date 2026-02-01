@@ -46,7 +46,6 @@ import { getLinkContent, getLinkField, isNavLevel, isNavRootItem, prepareFields 
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import { localeOptions } from '@/constants/localeOptions';
-import { InThisSectionStyles } from '@/types/styleFlags';
 import client from 'lib/sitecore-client';
 import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
@@ -322,12 +321,6 @@ const importMap = [
     module: '@/constants/localeOptions',
     exports: [
       { name: 'localeOptions', value: localeOptions },
-    ]
-  },
-  {
-    module: '@/types/styleFlags',
-    exports: [
-      { name: 'InThisSectionStyles', value: InThisSectionStyles },
     ]
   },
   {

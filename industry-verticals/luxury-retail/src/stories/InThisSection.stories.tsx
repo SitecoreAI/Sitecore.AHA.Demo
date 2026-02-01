@@ -13,9 +13,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof InThisSection>;
 
-const createInThisSectionFields = (hideTitle = false) => ({
+const createInThisSectionFields = () => ({
   Title: { value: 'In this Section' },
-  HideTitle: { value: hideTitle ? '1' : '' },
   Topic1: { value: 'Eat Smart' },
   Topic2: { value: 'Losing Weight' },
   Topic3: { value: 'Cooking Skills' },
@@ -42,13 +41,6 @@ const createInThisSectionFields = (hideTitle = false) => ({
 export const Default: Story = {
   render: () => {
     const fields = createInThisSectionFields();
-    return <InThisSection params={CommonParams} rendering={CommonRendering} fields={fields} />;
-  },
-};
-
-export const WithoutTitle: Story = {
-  render: () => {
-    const fields = createInThisSectionFields(true);
     return <InThisSection params={CommonParams} rendering={CommonRendering} fields={fields} />;
   },
 };

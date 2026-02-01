@@ -10,7 +10,6 @@ import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   Title: Field<string>;
-  HideTitle: Field<string>;
   Topic1: Field<string>;
   Topic2: Field<string>;
   Topic3: Field<string>;
@@ -27,11 +26,6 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  const hideTitleVal = fields?.HideTitle?.value;
-  const hideTitle =
-    hideTitleVal === '1' ||
-    String(hideTitleVal).toLowerCase() === 'true' ||
-    styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
@@ -47,14 +41,10 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        {!hideTitle && (
-          <>
-            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-              <ContentSdkText field={fields.Title} />
-            </h2>
-            <div className="border-foreground-light mb-8 border-t" />
-          </>
-        )}
+        <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
+          <ContentSdkText field={fields.Title} />
+        </h2>
+        <div className="border-foreground-light mb-8 border-t" />
 
         {/* Cards Grid - in edit mode always render at least one card slot so component has clickable area */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
