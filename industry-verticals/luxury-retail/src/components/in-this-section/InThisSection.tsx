@@ -25,19 +25,10 @@ export type InThisSectionProps = ComponentProps & {
 };
 
 export const Default = (props: InThisSectionProps): JSX.Element => {
-  const { params, fields, rendering } = props;
+  const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
-  // Hide Title: datasource field (Content tab) - reliable; or param/style as fallback
-  const hideTitleFromField = isParamEnabled(fields?.HideTitle?.value);
-  const hideTitleParam =
-    params?.HideTitle ??
-    params?.['Hide Title'] ??
-    rendering?.params?.HideTitle ??
-    rendering?.params?.['Hide Title'] ??
-    '';
-  const hideTitle =
-    hideTitleFromField || isParamEnabled(hideTitleParam) || styles?.includes('hide-title');
+  const hideTitle = isParamEnabled(fields?.HideTitle?.value) || styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
@@ -53,21 +44,12 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        {/* Title - hidden when Hide Title style selected (Design > Styling); always shown in edit mode for selection */}
-        {(!hideTitle || isPageEditing) && (
+        {!hideTitle && (
           <>
-            <h2
-              className={`text-foreground mb-4 text-2xl font-bold lg:text-3xl ${
-                hideTitle && isPageEditing ? 'opacity-60' : ''
-              }`}
-            >
+            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
               <ContentSdkText field={fields.Title} />
             </h2>
-            <div
-              className={`border-foreground-light mb-8 border-t ${
-                hideTitle && isPageEditing ? 'opacity-60' : ''
-              }`}
-            />
+            <div className="border-foreground-light mb-8 border-t" />
           </>
         )}
 
