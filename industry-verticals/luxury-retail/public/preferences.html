@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preferences - American Heart Association</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Roboto', 'Google Sans', Arial, sans-serif;
+        font-size: 14px;
+        color: #202124;
+        background: #f8f9fb;
+        min-height: 100vh;
+      }
+      .app {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Left Sidebar */
+      .sidebar {
+        width: 280px;
+        min-width: 280px;
+        background: #fff;
+        border-right: 1px solid #e8eaed;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 16px;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, 0.05);
+      }
+      .sidebar-logo {
+        display: block;
+        margin-bottom: 24px;
+      }
+      .sidebar-logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      .btn-donation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 10px 16px;
+        background: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #202124;
+        cursor: pointer;
+        margin-bottom: 24px;
+      }
+      .btn-donation:hover {
+        background: #f8f9fa;
+      }
+      .btn-donation .heart-icon {
+        width: 18px;
+        height: 18px;
+        color: #c8102e;
+      }
+      .nav-list {
+        list-style: none;
+      }
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        color: #202124;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .nav-item:hover {
+        background: #f1f3f4;
+      }
+      .nav-item.active {
+        background: #e8f0fe;
+        color: #1967d2;
+      }
+      .nav-item svg {
+        width: 20px;
+        height: 20px;
+        color: #5f6368;
+        flex-shrink: 0;
+      }
+      .nav-item.active svg {
+        color: #1967d2;
+      }
+      .profile-completion-card {
+        margin-top: auto;
+        padding: 16px;
+        background: #fff;
+        border: 1px solid #e8eaed;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        margin-bottom: 24px;
+      }
+      .profile-completion-card h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #202124;
+        margin-bottom: 8px;
+      }
+      .progress-bar-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .progress-bar {
+        flex: 1;
+        height: 8px;
+        background: #e8eaed;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        width: 92%;
+        background: #34a853;
+        border-radius: 4px;
+      }
+      .progress-pct {
+        font-size: 14px;
+        font-weight: 500;
+        color: #202124;
+      }
+      .profile-completion-card p {
+        font-size: 13px;
+        color: #5f6368;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+      .btn-complete-profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 8px 16px;
+        background: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #202124;
+        cursor: pointer;
+      }
+      .btn-complete-profile:hover {
+        background: #f8f9fa;
+      }
+      .sidebar-user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+      }
+      .sidebar-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #e8eaed;
+      }
+      .sidebar-user-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: #202124;
+      }
+      .sidebar-footer a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #5f6368;
+        text-decoration: none;
+        padding: 8px 0;
+      }
+      .sidebar-footer a:hover {
+        color: #202124;
+      }
+      .sidebar-footer a svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+      .lang-select {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+        font-size: 14px;
+        color: #202124;
+        cursor: pointer;
+      }
+      .lang-select svg {
+        width: 18px;
+        height: 18px;
+        color: #5f6368;
+      }
+
+      /* Main Content */
+      .main {
+        flex: 1;
+        padding: 32px 40px 40px;
+        overflow-y: auto;
+      }
+      .main h1 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #202124;
+        margin-bottom: 24px;
+      }
+      .prefs-card {
+        background: #fff;
+        border: 1px solid #e8eaed;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 24px 32px 32px;
+        max-width: 720px;
+      }
+      .prefs-section {
+        margin-bottom: 32px;
+      }
+      .prefs-section:last-of-type {
+        margin-bottom: 32px;
+      }
+      .prefs-section h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #202124;
+        margin-bottom: 4px;
+      }
+      .prefs-section .desc {
+        font-size: 13px;
+        color: #5f6368;
+        margin-bottom: 16px;
+      }
+      .checkbox-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #202124;
+      }
+      .checkbox-item input {
+        width: 18px;
+        height: 18px;
+        accent-color: #1967d2;
+        cursor: pointer;
+      }
+      .btn-save {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: #1967d2;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+      }
+      .btn-save:hover {
+        background: #1557b0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a href="portal.html" class="sidebar-logo">
+          <img src="/aha_email_logo.png" alt="American Heart Association" />
+        </a>
+        <button type="button" class="btn-donation">
+          <svg class="heart-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          Make a new donation
+        </button>
+        <ul class="nav-list">
+          <li>
+            <a href="portal.html" class="nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="preferences.html" class="nav-item active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+              Preferences
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              Donation history
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              Receipts
+            </a>
+          </li>
+        </ul>
+        <div class="profile-completion-card">
+          <h3>Profile completion</h3>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <span class="progress-pct">92%</span>
+          </div>
+          <p>Sharing a bit more helps us make your experience smoother and more relevant.</p>
+          <button type="button" class="btn-complete-profile">Complete your profile</button>
+        </div>
+        <div class="sidebar-user">
+          <img src="/headshot.png" alt="" class="sidebar-avatar" />
+          <span class="sidebar-user-name">Mr Thomas Lin</span>
+        </div>
+        <div class="sidebar-footer">
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+            Report a problem
+          </a>
+          <div class="lang-select">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            English (USA)
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <h1>Preferences</h1>
+        <div class="prefs-card">
+          <section class="prefs-section">
+            <h2>Interests</h2>
+            <p class="desc">Select topics you'd like to hear about. We'll tailor our updates and opportunities to what matters most to you.</p>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="heart-health" />
+                Heart health & wellness tips
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="research" checked />
+                Cardiovascular research updates
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="cpr" />
+                CPR & first aid training
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="nutrition" checked />
+                Nutrition & healthy eating
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="stroke" />
+                Stroke awareness & prevention
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="events" />
+                Fundraising events & walks
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="volunteer" />
+                Volunteer opportunities
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="prevention" checked />
+                Heart disease prevention
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="interest" value="stories" />
+                Patient stories & impact
+              </label>
+            </div>
+          </section>
+          <section class="prefs-section">
+            <h2>Marketing Communications</h2>
+            <p class="desc">Choose how you'd like to receive updates, donation receipts, and news from the American Heart Association.</p>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="marketing" value="email" checked />
+                Email
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="marketing" value="sms" />
+                SMS
+              </label>
+            </div>
+          </section>
+          <button type="button" class="btn-save">Save preferences</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
