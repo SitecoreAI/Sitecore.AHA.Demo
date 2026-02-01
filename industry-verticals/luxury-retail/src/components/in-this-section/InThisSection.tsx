@@ -26,6 +26,7 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const { params, fields } = props;
   const id = params?.RenderingIdentifier;
   const styles = params?.styles || '';
+  const hideTitle = styles?.includes('hide-title');
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
 
@@ -37,14 +38,18 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
 
   return (
     <section
-      className={`component in-this-section py-10 lg:py-16 ${styles}`}
+      className={`component in-this-section pt-10 pb-10 lg:pb-16 ${styles}`}
       id={id ? id : undefined}
     >
       <div className="mx-auto max-w-[1170px] px-4">
-        <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-          <ContentSdkText field={fields.Title} />
-        </h2>
-        <div className="border-foreground-light mb-8 border-t" />
+        {!hideTitle && (
+          <>
+            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
+              <ContentSdkText field={fields.Title} />
+            </h2>
+            <div className="border-foreground-light mb-8 border-t" />
+          </>
+        )}
 
         {/* Cards Grid - in edit mode always render at least one card slot so component has clickable area */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
