@@ -30,7 +30,6 @@ export const Default = (props: InThisSectionProps): JSX.Element => {
   const hideTitleVal = fields?.HideTitle?.value;
   const hideTitle =
     hideTitleVal === '1' ||
-    hideTitleVal === true ||
     String(hideTitleVal).toLowerCase() === 'true' ||
     styles?.includes('hide-title');
   const { page } = useSitecore();
