@@ -11,7 +11,7 @@
     "Sitecore.DevEx.Extensibility.XMCloud@1.1.120"
   ],
   "serialization": {
-    "defaultMaxRelativeItemPathLength": 70,
+    "defaultMaxRelativeItemPathLength": 200,
     "defaultModuleRelativeSerializationPath": "items",
     "removeOrphansForRoles": true,
     "removeOrphansForUsers": true,
