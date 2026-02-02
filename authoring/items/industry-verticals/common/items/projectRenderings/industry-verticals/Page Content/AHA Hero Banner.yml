@@ -27,7 +27,7 @@ SharedFields:
   Value: "{F1A250DB-2CAF-45DD-9BA5-0860A1AD7E45}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']/*[@@templatename='AHA Hero Banner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='AHA Hero Banner Folder']"
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='AHA Hero Banner Folder']|query:$site/*[@@name='Data']/*[@@templatename='Hero Banner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='AHA Hero Banner Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Hero Banner Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
   Value: 
