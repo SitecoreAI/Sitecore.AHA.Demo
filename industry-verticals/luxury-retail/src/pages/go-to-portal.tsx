@@ -3,13 +3,13 @@ import { CloudSDK } from '@sitecore-cloudsdk/core/browser';
 import { identity } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
 
-const REDIRECT_URL = '/';
+const REDIRECT_URL = '/portal.html';
 const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
 
 /**
  * Page that sends an IDENTITY event (Identify) with hardcoded email,
- * then redirects to the home page. Used when clicking "Go to Donor Portal"
+ * then redirects to the Donor Portal (portal.html). Used when clicking "Go to Donor Portal"
  * from email.html to simulate the Create Events! Identify flow.
  */
 export default function GoToPortal(): null {
