@@ -39,7 +39,9 @@ export default function GoToPortal(): null {
           .addEvents()
           .initialize();
 
-        console.log(`${LOG_PREFIX} client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`);
+        console.log(
+          `${LOG_PREFIX} client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`
+        );
         await identity({
           identifiers: [{ provider: IDENTITY_PROVIDER, id: IDENTITY_EMAIL }],
           channel: 'WEB',
