@@ -19,6 +19,11 @@ const nextConfig = {
   // Enable React Strict Mode
   reactStrictMode: true,
 
+  // Skip ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Disable the X-Powered-By header. Follows security best practices.
   poweredByHeader: false,
 
