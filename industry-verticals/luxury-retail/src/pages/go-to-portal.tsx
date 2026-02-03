@@ -3,20 +3,20 @@ import { CloudSDK } from '@sitecore-cloudsdk/core/browser';
 import { identity } from '@sitecore-cloudsdk/events/browser';
 import config from 'sitecore.config';
 
-const PORTAL_URL = '/portal.html';
+const REDIRECT_URL = '/';
 const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
 
 /**
  * Page that sends an IDENTITY event (Identify) with hardcoded email,
- * then redirects to the Donor Portal. Used when clicking "Go to Donor Portal"
+ * then redirects to the home page. Used when clicking "Go to Donor Portal"
  * from email.html to simulate the Create Events! Identify flow.
  */
 export default function GoToPortal(): null {
   useEffect(() => {
     const run = async (): Promise<void> => {
       if (!config.api.edge?.clientContextId) {
-        window.location.href = PORTAL_URL;
+        window.location.href = REDIRECT_URL;
         return;
       }
       try {
@@ -40,7 +40,7 @@ export default function GoToPortal(): null {
       } catch {
         // Still redirect if identity fails (e.g. dev or network)
       }
-      window.location.href = PORTAL_URL;
+      window.location.href = REDIRECT_URL;
     };
     run();
   }, []);
