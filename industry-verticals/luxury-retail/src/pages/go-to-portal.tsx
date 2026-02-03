@@ -6,6 +6,7 @@ import config from 'sitecore.config';
 const REDIRECT_URL = '/portal.html';
 const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
+const LOG_PREFIX = '[go-to-portal]';
 
 /**
  * Page that sends an IDENTITY event (Identify) with hardcoded email,
@@ -13,13 +14,21 @@ const IDENTITY_PROVIDER = 'email';
  * from email.html to simulate the Create Events! Identify flow.
  */
 export default function GoToPortal(): null {
+  // Logs on server (Node.js terminal) when page is requested
+  console.log(`${LOG_PREFIX} page requested`);
+
   useEffect(() => {
     const run = async (): Promise<void> => {
+      console.log(`${LOG_PREFIX} client: starting`);
+
       if (!config.api.edge?.clientContextId) {
+        console.log(`${LOG_PREFIX} client: no clientContextId, redirecting to ${REDIRECT_URL}`);
         window.location.href = REDIRECT_URL;
         return;
       }
+
       try {
+        console.log(`${LOG_PREFIX} client: initializing CloudSDK`);
         CloudSDK({
           sitecoreEdgeUrl: config.api.edge.edgeUrl,
           sitecoreEdgeContextId: config.api.edge.clientContextId,
@@ -30,6 +39,7 @@ export default function GoToPortal(): null {
           .addEvents()
           .initialize();
 
+        console.log(`${LOG_PREFIX} client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`);
         await identity({
           identifiers: [{ provider: IDENTITY_PROVIDER, id: IDENTITY_EMAIL }],
           channel: 'WEB',
@@ -37,9 +47,12 @@ export default function GoToPortal(): null {
           page: '/',
           language: 'EN',
         });
-      } catch {
-        // Still redirect if identity fails (e.g. dev or network)
+        console.log(`${LOG_PREFIX} client: identity sent`);
+      } catch (err) {
+        console.warn(`${LOG_PREFIX} client: identity failed`, err);
       }
+
+      console.log(`${LOG_PREFIX} client: redirecting to ${REDIRECT_URL}`);
       window.location.href = REDIRECT_URL;
     };
     run();
