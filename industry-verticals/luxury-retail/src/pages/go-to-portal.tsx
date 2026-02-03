@@ -8,6 +8,16 @@ const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
 const LOG_PREFIX = '[go-to-portal]';
 
+/** Log in browser and send to API so Node.js terminal shows it too */
+function logClient(message: string): void {
+  console.log(`${LOG_PREFIX} ${message}`);
+  fetch('/api/go-to-portal-log', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message }),
+  }).catch(() => {});
+}
+
 /**
  * Page that sends an IDENTITY event (Identify) with hardcoded email,
  * then redirects to the Donor Portal (portal.html). Used when clicking "Go to Donor Portal"
@@ -19,16 +29,16 @@ export default function GoToPortal(): null {
 
   useEffect(() => {
     const run = async (): Promise<void> => {
-      console.log(`${LOG_PREFIX} client: starting`);
+      logClient('client: starting');
 
       if (!config.api.edge?.clientContextId) {
-        console.log(`${LOG_PREFIX} client: no clientContextId, redirecting to ${REDIRECT_URL}`);
+        logClient(`client: no clientContextId, redirecting to ${REDIRECT_URL}`);
         window.location.href = REDIRECT_URL;
         return;
       }
 
       try {
-        console.log(`${LOG_PREFIX} client: initializing CloudSDK`);
+        logClient('client: initializing CloudSDK');
         CloudSDK({
           sitecoreEdgeUrl: config.api.edge.edgeUrl,
           sitecoreEdgeContextId: config.api.edge.clientContextId,
@@ -39,8 +49,8 @@ export default function GoToPortal(): null {
           .addEvents()
           .initialize();
 
-        console.log(
-          `${LOG_PREFIX} client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`
+        logClient(
+          `client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`
         );
         await identity({
           identifiers: [{ provider: IDENTITY_PROVIDER, id: IDENTITY_EMAIL }],
@@ -49,12 +59,13 @@ export default function GoToPortal(): null {
           page: '/',
           language: 'EN',
         });
-        console.log(`${LOG_PREFIX} client: identity sent`);
+        logClient('client: identity sent');
       } catch (err) {
         console.warn(`${LOG_PREFIX} client: identity failed`, err);
+        logClient(`client: identity failed ${err instanceof Error ? err.message : String(err)}`);
       }
 
-      console.log(`${LOG_PREFIX} client: redirecting to ${REDIRECT_URL}`);
+      logClient(`client: redirecting to ${REDIRECT_URL}`);
       window.location.href = REDIRECT_URL;
     };
     run();
