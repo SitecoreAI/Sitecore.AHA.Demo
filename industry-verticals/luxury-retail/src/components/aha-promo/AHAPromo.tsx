@@ -45,25 +45,27 @@ export const Default = (props: AHAPromoProps): JSX.Element => {
           className="grid grid-cols-1 gap-8 rounded-lg bg-white p-8 lg:grid-cols-2 lg:gap-12 lg:p-12"
           style={{ border: `15px solid ${AHA_RED}` }}
         >
-          {/* Text - stacked below image on mobile, left on desktop */}
-          <div className="order-2 flex flex-col items-start text-left lg:order-1">
-            <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
-              <ContentSdkText field={props.fields.PromoTitle} />
-            </h2>
-            <div className="space-y-6">
+          {/* Text - stacked below image on mobile, left on desktop; line + link bottom-aligned */}
+          <div className="order-2 flex min-h-0 flex-col items-start text-left lg:order-1">
+            <div className="w-full flex-1">
+              <h2 className="text-foreground mb-4 text-2xl font-bold lg:text-3xl">
+                <ContentSdkText field={props.fields.PromoTitle} />
+              </h2>
               <div className="text-foreground text-base leading-relaxed lg:text-lg">
                 <ContentSdkRichText field={props.fields.PromoDescription} />
               </div>
-              <div className="border-foreground-light w-full border-t" />
             </div>
-            {(props.fields.PromoMoreInfo?.value?.href || isPageEditing) && (
-              <div className="mt-6 flex justify-start">
-                <Link
-                  field={props.fields.PromoMoreInfo}
-                  className="inline-flex items-center font-medium text-[#c10e21] hover:underline"
-                />
-              </div>
-            )}
+            <div className="mt-auto w-full">
+              <div className="border-foreground-light w-full border-t" />
+              {(props.fields.PromoMoreInfo?.value?.href || isPageEditing) && (
+                <div className="mt-4 flex justify-start">
+                  <Link
+                    field={props.fields.PromoMoreInfo}
+                    className="inline-flex items-center font-medium text-[#c10e21] hover:underline"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Image - on top on mobile, right on desktop; shrinks on smaller viewports */}
