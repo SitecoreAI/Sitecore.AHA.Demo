@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { CloudSDK } from '@sitecore-cloudsdk/core/browser';
-import { identity } from '@sitecore-cloudsdk/events/browser';
+import { init } from '@sitecore/engage';
 import config from 'sitecore.config';
 
 const REDIRECT_URL = '/portal.html';
 const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
 const LOG_PREFIX = '[go-to-portal]';
+const POINT_OF_SALE = 'StandardDemo';
 /** Same keys TM.js uses so demobar / Guest Data sees identity (TM: identifyUser) */
 const TM_STORAGE_KEY_PROVIDER = 'scDemoBar_identityProvider';
 const TM_STORAGE_KEY_VALUE = 'scDemoBar_identityValue';
@@ -37,37 +37,42 @@ function logClient(message: string): void {
 }
 
 /**
- * Page that sends an IDENTITY event (Identify) with hardcoded email,
+ * Page that sends an IDENTITY event (Identify) with hardcoded email via the Engage SDK,
  * then redirects to the Donor Portal (portal.html). Used when clicking "Go to Donor Portal"
- * from email.html to simulate the Create Events! Identify flow.
+ * from email.html to simulate the Create Events! Identify flow. Uses same SDK as TM (window.engage).
  */
 export default function GoToPortal(): null {
-  // Logs on server (Node.js terminal) when page is requested
   console.log(`${LOG_PREFIX} page requested`);
 
   useEffect(() => {
     const run = async (): Promise<void> => {
       logClient('client: starting');
 
-      if (!config.api.edge?.clientContextId) {
-        logClient(`client: no clientContextId, redirecting to ${REDIRECT_URL}`);
+      const clientKey = config.api.edge?.clientContextId;
+      const targetURL = process.env.NEXT_PUBLIC_ENGAGE_TARGET_URL || config.api.edge?.edgeUrl;
+      if (!clientKey || !targetURL) {
+        logClient(`client: no clientKey/targetURL, redirecting to ${REDIRECT_URL}`);
         window.location.href = REDIRECT_URL;
         return;
       }
 
-      try {
-        logClient('client: initializing CloudSDK');
-        CloudSDK({
-          sitecoreEdgeUrl: config.api.edge.edgeUrl,
-          sitecoreEdgeContextId: config.api.edge.clientContextId,
-          siteName: config.defaultSite || 'website',
-          enableBrowserCookie: true,
-          cookieDomain: window.location.hostname.replace(/^www\./, ''),
-        })
-          .addEvents()
-          .initialize();
+      const cookieDomain =
+        window.location.hostname === 'localhost'
+          ? 'localhost'
+          : `.${window.location.hostname.replace(/^www\./, '')}`;
 
-        // Same eventData shape as TM.js identifyUser + additionalIdentityData (channel, currency, pos, language, page, identifiers, email, firstName, lastName)
+      try {
+        logClient('client: initializing Engage SDK');
+        const engage = await init({
+          clientKey,
+          targetURL,
+          pointOfSale: POINT_OF_SALE,
+          cookieDomain,
+          cookieExpiryDays: 365,
+          forceServerCookieMode: false,
+        });
+
+        // Same eventData shape as TM.js identifyUser + additionalIdentityData
         const eventData = {
           channel: 'WEB',
           currency: 'USD',
@@ -80,23 +85,15 @@ export default function GoToPortal(): null {
         };
         logClient(`client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`);
         logClient(`client: JSON sent to events API: ${JSON.stringify(eventData, null, 2)}`);
-        const response = await identity(eventData);
+        const response = await engage.identity(eventData);
         logClient(`client: JSON received from events API: ${JSON.stringify(response, null, 2)}`);
-        // Do what TM.js does locally: store provider/value so demobar sees the same identity state
         if (typeof window !== 'undefined' && window.localStorage) {
           window.localStorage.setItem(TM_STORAGE_KEY_PROVIDER, IDENTITY_PROVIDER);
           window.localStorage.setItem(TM_STORAGE_KEY_VALUE, IDENTITY_EMAIL);
         }
-        // Set guest ref cookie so Engage runtime / Guest Data tab can resolve identified visitor
-        const ref =
-          response &&
-          typeof response === 'object' &&
-          typeof (response as { ref?: string }).ref === 'string'
-            ? (response as { ref: string }).ref
-            : '';
-        if (ref && config.api.edge?.clientContextId) {
-          setGuestRefCookie(ref, config.api.edge.clientContextId);
-          logClient(`client: set guest ref cookie (ref=${ref})`);
+        if (response?.ref && clientKey) {
+          setGuestRefCookie(response.ref, clientKey);
+          logClient(`client: set guest ref cookie (ref=${response.ref})`);
         }
         logClient('client: identity sent');
       } catch (err) {
