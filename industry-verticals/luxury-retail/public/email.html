@@ -639,7 +639,7 @@
             <div class="donor-portal">
               <h3>Your Donor Portal</h3>
               <p>Easily track your donations, manage your personal details, and adjust your giving preferences anytime.</p>
-              <a href="/go-to-portal" class="btn">Go to Donor Portal</a>
+              <a href="/go-to-portal" class="btn" onclick="handlePortalClick(event)">Go to Donor Portal</a>
             </div>
 
             <div class="footer-actions">
@@ -674,5 +674,48 @@
         <button class="icon-btn" title="Add-ons">+</button>
       </aside>
     </div>
+    <!-- Engage script so handlePortalClick can call window.engage.identity -->
+    <script src="https://api-engage-us.sitecorecloud.io/v1.2/script.js?client_key=9f46c27c71691685ad1d5419b225529b" async></script>
+    <script>
+      function showToast() {
+        try {
+          var toast = document.getElementById('saveMsg');
+          if (toast) {
+            toast.style.display = 'block';
+            setTimeout(function () {
+              toast.style.display = 'none';
+            }, 1500);
+          }
+        } catch (e) {}
+      }
+
+      function handlePortalClick(e) {
+        e.preventDefault();
+        var identityProvider = 'email';
+        var identityValue = 'tohams@gmail.com';
+        var eventData = {
+          channel: 'web',
+          currency: 'usd',
+          pos: 'myPOS',
+          language: 'en',
+          page: window.location.pathname,
+          identifiers: [
+            {
+              provider: identityProvider,
+              id: identityValue
+            }
+          ]
+        };
+        if (window.engage && typeof window.engage.identity === 'function') {
+          window.engage.identity(eventData);
+        }
+        showToast();
+        localStorage.setItem('scDemoBar_identityProvider', identityProvider);
+        localStorage.setItem('scDemoBar_identityValue', identityValue);
+        setTimeout(function () {
+          window.location.href = '/portal.html';
+        }, 150);
+      }
+    </script>
   </body>
 </html>
