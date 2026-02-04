@@ -7,10 +7,11 @@ import {
 } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, NextImage, Placeholder, RichText, Image, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
-import { useMemo, useId, useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useMemo, useId, useState, useRef, useCallback } from 'react';
 import React from 'react';
 import * as React_7214d18997ee864dd178de7b3a8430f6783e8b89 from 'react';
+import config from 'sitecore.config';
+import { Link, Text, useSitecore, NextImage, Placeholder, RichText, Image, CdpHelper, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import Head from 'next/head';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -51,9 +52,27 @@ import Image_5d8ce56058442d94361877e28c501c951a554a6a from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
 import nextConfig from 'next.config';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
-import config from 'sitecore.config';
 
 const importMap = [
+  {
+    module: 'react',
+    exports: [
+      { name: 'useEffect', value: useEffect },
+      { name: 'useMemo', value: useMemo },
+      { name: 'useId', value: useId },
+      { name: 'useState', value: useState },
+      { name: 'useRef', value: useRef },
+      { name: 'useCallback', value: useCallback },
+      { name: 'default', value: React },
+      { name: '*', value: React_7214d18997ee864dd178de7b3a8430f6783e8b89 },
+    ]
+  },
+  {
+    module: 'sitecore.config',
+    exports: [
+      { name: 'default', value: config },
+    ]
+  },
   {
     module: '@sitecore-content-sdk/nextjs',
     exports: [
@@ -66,19 +85,6 @@ const importMap = [
       { name: 'Image', value: Image },
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
-    ]
-  },
-  {
-    module: 'react',
-    exports: [
-      { name: 'useMemo', value: useMemo },
-      { name: 'useId', value: useId },
-      { name: 'useEffect', value: useEffect },
-      { name: 'useState', value: useState },
-      { name: 'useRef', value: useRef },
-      { name: 'useCallback', value: useCallback },
-      { name: 'default', value: React },
-      { name: '*', value: React_7214d18997ee864dd178de7b3a8430f6783e8b89 },
     ]
   },
   {
@@ -351,12 +357,6 @@ const importMap = [
     module: '@sitecore-cloudsdk/events/browser',
     exports: [
       { name: 'pageView', value: pageView },
-    ]
-  },
-  {
-    module: 'sitecore.config',
-    exports: [
-      { name: 'default', value: config },
     ]
   }
 ] as ImportEntry[];

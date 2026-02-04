@@ -2,6 +2,7 @@ import { JSX } from 'react';
 import type { AppProps } from 'next/app';
 import { I18nProvider } from 'next-localization';
 import Bootstrap from 'src/Bootstrap';
+import IdentifyFromQuery from 'src/components/IdentifyFromQuery';
 import { SitecorePageProps } from '@sitecore-content-sdk/nextjs';
 import scConfig from 'sitecore.config';
 import 'assets/main.css';
@@ -12,6 +13,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
   return (
     <>
       <Bootstrap {...pageProps} />
+      <IdentifyFromQuery />
       {/*
         // Use the next-localization (w/ rosetta) library to provide our translation dictionary to the app.
         // Note Next.js does not (currently) provide anything for translation, only i18n routing.
