@@ -7,6 +7,9 @@ const REDIRECT_URL = '/portal.html';
 const IDENTITY_EMAIL = 'tohams@gmail.com';
 const IDENTITY_PROVIDER = 'email';
 const LOG_PREFIX = '[go-to-portal]';
+/** Same keys TM.js uses so demobar / Guest Data sees identity (TM: identifyUser) */
+const TM_STORAGE_KEY_PROVIDER = 'scDemoBar_identityProvider';
+const TM_STORAGE_KEY_VALUE = 'scDemoBar_identityValue';
 
 /** Log in browser and send to API so Node.js terminal shows it too */
 function logClient(message: string): void {
@@ -49,16 +52,26 @@ export default function GoToPortal(): null {
           .addEvents()
           .initialize();
 
-        logClient(
-          `client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`
-        );
-        await identity({
-          identifiers: [{ provider: IDENTITY_PROVIDER, id: IDENTITY_EMAIL }],
+        // Same eventData shape as TM.js identifyUser + additionalIdentityData (channel, currency, pos, language, page, identifiers, email, firstName, lastName)
+        const eventData = {
           channel: 'WEB',
           currency: 'USD',
-          page: '/',
           language: 'EN',
-        });
+          page: window.location.pathname || '/',
+          identifiers: [{ provider: IDENTITY_PROVIDER, id: IDENTITY_EMAIL }],
+          email: IDENTITY_EMAIL,
+          firstName: '',
+          lastName: '',
+        };
+        logClient(`client: sending identity (${IDENTITY_PROVIDER}: ${IDENTITY_EMAIL})`);
+        logClient(`client: JSON sent to events API: ${JSON.stringify(eventData, null, 2)}`);
+        const response = await identity(eventData);
+        logClient(`client: JSON received from events API: ${JSON.stringify(response, null, 2)}`);
+        // Do what TM.js does locally: store provider/value so demobar and Guest Data see the same identity state
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem(TM_STORAGE_KEY_PROVIDER, IDENTITY_PROVIDER);
+          window.localStorage.setItem(TM_STORAGE_KEY_VALUE, IDENTITY_EMAIL);
+        }
         logClient('client: identity sent');
       } catch (err) {
         console.warn(`${LOG_PREFIX} client: identity failed`, err);
