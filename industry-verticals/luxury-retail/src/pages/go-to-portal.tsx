@@ -10,6 +10,21 @@ const LOG_PREFIX = '[go-to-portal]';
 /** Same keys TM.js uses so demobar / Guest Data sees identity (TM: identifyUser) */
 const TM_STORAGE_KEY_PROVIDER = 'scDemoBar_identityProvider';
 const TM_STORAGE_KEY_VALUE = 'scDemoBar_identityValue';
+/** Guest ref cookie so Engage runtime / Guest Data tab can resolve identified visitor (matches SDK: sc_{contextId}_personalize) */
+const GUEST_COOKIE_PREFIX = 'sc_';
+const GUEST_COOKIE_SUFFIX = '_personalize';
+const GUEST_COOKIE_MAX_AGE_DAYS = 730;
+
+function setGuestRefCookie(ref: string, clientContextId: string): void {
+  const name = GUEST_COOKIE_PREFIX + clientContextId + GUEST_COOKIE_SUFFIX;
+  const maxAge = GUEST_COOKIE_MAX_AGE_DAYS * 24 * 60 * 60;
+  const hostname = window.location.hostname.replace(/^www\./, '');
+  const domainAttr =
+    hostname && hostname !== 'localhost' && !/^\d+\.\d+\.\d+\.\d+$/.test(hostname)
+      ? `; domain=.${hostname}`
+      : '';
+  document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(ref)}; path=/; max-age=${maxAge}; SameSite=Lax${domainAttr}`;
+}
 
 /** Log in browser and send to API so Node.js terminal shows it too */
 function logClient(message: string): void {
@@ -67,10 +82,16 @@ export default function GoToPortal(): null {
         logClient(`client: JSON sent to events API: ${JSON.stringify(eventData, null, 2)}`);
         const response = await identity(eventData);
         logClient(`client: JSON received from events API: ${JSON.stringify(response, null, 2)}`);
-        // Do what TM.js does locally: store provider/value so demobar and Guest Data see the same identity state
+        // Do what TM.js does locally: store provider/value so demobar sees the same identity state
         if (typeof window !== 'undefined' && window.localStorage) {
           window.localStorage.setItem(TM_STORAGE_KEY_PROVIDER, IDENTITY_PROVIDER);
           window.localStorage.setItem(TM_STORAGE_KEY_VALUE, IDENTITY_EMAIL);
+        }
+        // Set guest ref cookie so Engage runtime / Guest Data tab can resolve identified visitor
+        const ref = response && typeof response === 'object' && typeof (response as { ref?: string }).ref === 'string' ? (response as { ref: string }).ref : '';
+        if (ref && config.api.edge?.clientContextId) {
+          setGuestRefCookie(ref, config.api.edge.clientContextId);
+          logClient(`client: set guest ref cookie (ref=${ref})`);
         }
         logClient('client: identity sent');
       } catch (err) {
