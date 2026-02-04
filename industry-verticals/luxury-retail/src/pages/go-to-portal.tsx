@@ -88,7 +88,12 @@ export default function GoToPortal(): null {
           window.localStorage.setItem(TM_STORAGE_KEY_VALUE, IDENTITY_EMAIL);
         }
         // Set guest ref cookie so Engage runtime / Guest Data tab can resolve identified visitor
-        const ref = response && typeof response === 'object' && typeof (response as { ref?: string }).ref === 'string' ? (response as { ref: string }).ref : '';
+        const ref =
+          response &&
+          typeof response === 'object' &&
+          typeof (response as { ref?: string }).ref === 'string'
+            ? (response as { ref: string }).ref
+            : '';
         if (ref && config.api.edge?.clientContextId) {
           setGuestRefCookie(ref, config.api.edge.clientContextId);
           logClient(`client: set guest ref cookie (ref=${ref})`);
