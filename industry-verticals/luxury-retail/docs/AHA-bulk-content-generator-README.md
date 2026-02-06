@@ -24,12 +24,15 @@ Pre-generated images for the bulk content flow are in `public/aha-bulk-content/`
 
 Each image shows at least one person in red or with a clear red clothing highlight, per your requirement.
 
-## Image API placeholder
+## Image URLs (hardcoded)
 
-The JSON templates use a placeholder image base URL: `your-aha-image-api.example.com`. Replace this with:
+All image URLs in the JSON are hardcoded to the deployed app:
 
-- Your own image API that accepts a `query` or `prompt` (e.g. `?query={{HeroImage}}` or `?prompt={{HeroTitle}}`), and ensure generated prompts follow the red-clothing guidance above, or  
-- Static URLs to the images in `public/aha-bulk-content/` (or your CDN) when you want to use the pre-generated AHA images.
+- **Base URL:** `https://sitecore-aha-demo.vercel.app/`
+- **Bulk content images:** `https://sitecore-aha-demo.vercel.app/aha-bulk-content/aha-bulk-hero.png`, `aha-bulk-donor.png`, `aha-bulk-volunteer.png`, `aha-bulk-health-seeker.png`
+- **Email logo:** `https://sitecore-aha-demo.vercel.app/aha_email_logo.png`
+
+Ensure `public/aha-bulk-content/` and `public/aha_email_logo.png` are deployed so these URLs resolve on [sitecore-aha-demo.vercel.app](https://sitecore-aha-demo.vercel.app/).
 
 ## Usage
 
