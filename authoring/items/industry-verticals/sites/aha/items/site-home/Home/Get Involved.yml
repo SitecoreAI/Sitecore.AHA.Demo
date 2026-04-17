@@ -1,0 +1,48 @@
+﻿---
+ID: "0c696a4e-1720-40c4-8d70-77a08412b151"
+Parent: "f557e9f8-8408-4926-a2a7-aae8598bd185"
+Template: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Home/Get Involved"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{BA9AF6C0-4A83-4B1C-85F0-952E89FFE62E}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "08e47cb1-1f9b-46ac-b13f-f7a3a0e49070"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260128T212802Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Get Involved
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a2ff5816-f6fd-48e8-8802-371d4c8dff99"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260128T212807Z
+    - ID: "f77b6eec-9e1b-42aa-af08-48e915b5593c"
+      Hint: CategoryName
+      Value: Get Involved

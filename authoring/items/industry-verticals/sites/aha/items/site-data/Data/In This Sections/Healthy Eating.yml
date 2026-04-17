@@ -1,0 +1,58 @@
+﻿---
+ID: "fcdb4f2a-ef65-4504-b588-236ec4859347"
+Parent: "3c29a89b-af32-479c-9998-a96c7d6f069a"
+Template: "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/In This Sections/Healthy Eating"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"
+      Hint: Topic1
+      Value: Eat Smart
+    - ID: "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4a5b6c"
+      Hint: Topic2
+      Value: Losing Weight
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260130T202500Z
+    - ID: "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
+      Hint: Topic3
+      Value: Cooking Skills
+    - ID: "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e"
+      Hint: Image1
+      Value: |
+        <image mediaid="bbbee53f-7259-4f17-8190-5bd62285c9c4" />
+    - ID: "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f"
+      Hint: Image2
+      Value: |
+        <image mediaid="7ea6b8ed-da93-45fb-bcb1-9b909f25a83b" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a"
+      Hint: Image3
+      Value: |
+        <image mediaid="de3fd9df-8e43-4e21-8605-ab814ef7dd68" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "941f33b2-a092-413f-9c10-c1a5e8443755"
+    - ID: "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4a"
+      Hint: Title
+      Value: In this Section
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260201T174150Z

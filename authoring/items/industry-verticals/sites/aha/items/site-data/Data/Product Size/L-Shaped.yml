@@ -1,0 +1,26 @@
+﻿---
+ID: "92186370-0e38-4200-8509-b6e438050ca6"
+Parent: "7adc3161-c52a-41b5-9836-c685e6ccb04b"
+Template: "3dd5dfcc-0769-4306-9877-71df72ff22c5"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Product Size/L-Shaped"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251117T115815Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ddf84e6-0d41-4751-8434-933696eab8e8"
+    - ID: "91a5f0ce-60e5-494d-ac50-9308b916b490"
+      Hint: ProductSize
+      Value: "L-Shaped"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251117T115815Z

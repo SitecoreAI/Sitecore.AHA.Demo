@@ -1,0 +1,93 @@
+﻿---
+ID: "7755e19d-4866-4a64-90f9-411f48e224d6"
+Parent: "9e7ecde0-5507-48d4-a726-12cb2ab96b80"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Presentation/Partial Designs/Footer"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: footer
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E2439CCC-F2B1-4A2D-95D3-856C3BAA73C5}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "b50b9d7f-181f-4312-a6dc-e60c42f9c5b5"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{01A4C5C8-1B51-4753-BCCC-420A8A555DD5}"
+          p:before="*"
+          s:ds="D66DEF30-65D5-4DBE-A244-4FD5B8AF96E2"
+          s:id="{02654BA0-74AE-42A4-B384-BCA9B96ADF4B}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-footer" />
+        <r
+          uid="{649382A4-7175-4B44-B249-DB35F9EDB70B}"
+          p:after="r[@uid='{01A4C5C8-1B51-4753-BCCC-420A8A555DD5}']"
+          s:ds="B07CF556-3645-4B46-971A-3C58CE0E94A4"
+          s:id="{32E7FD88-4E5D-4AAB-A15F-61DCEBA1EE6F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="/headless-footer/footer-list-fourth-1" />
+        <r
+          uid="{08D95E35-0F8A-41A6-A3C5-C7AA1CA7B6BB}"
+          p:after="r[@uid='{649382A4-7175-4B44-B249-DB35F9EDB70B}']"
+          s:ds="B24F12E0-EB3F-4B5D-93CF-59606716169A"
+          s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0231B5D1-040C-4DF0-BB72-FBBF80500414%7D&amp;Styles=%7C%7B32293277-5955-4112-9A6F-18DBC1FEB335%7D%7C%7BDBD7192A-D2B4-440E-B5BA-04DE1EA9855C%7D&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="/headless-footer/footer-list-first-1" />
+        <r
+          uid="{6701D2C5-303D-4AB4-82CA-50E3C30C4C2F}"
+          p:after="r[@uid='{08D95E35-0F8A-41A6-A3C5-C7AA1CA7B6BB}']"
+          s:ds="09BCE7C0-C130-4CFD-BDB3-ED9AE76BE031"
+          s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0231B5D1-040C-4DF0-BB72-FBBF80500414%7D&amp;Styles=%7C%7B32293277-5955-4112-9A6F-18DBC1FEB335%7D%7C%7BDBD7192A-D2B4-440E-B5BA-04DE1EA9855C%7D&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="/headless-footer/footer-list-second-1" />
+        <r
+          uid="{DC25F9AE-9D5C-43F3-9602-A79A367BA56C}"
+          p:after="r[@uid='{6701D2C5-303D-4AB4-82CA-50E3C30C4C2F}']"
+          s:ds="2AF8C05F-A8E7-44B4-97E9-6D1782073347"
+          s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0231B5D1-040C-4DF0-BB72-FBBF80500414%7D&amp;Styles=%7C%7B32293277-5955-4112-9A6F-18DBC1FEB335%7D%7C%7BDBD7192A-D2B4-440E-B5BA-04DE1EA9855C%7D&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="/headless-footer/footer-list-third-1" />
+        <r
+          uid="{FC1AFCE2-1AD9-46A0-BB5A-FB64A3BFDF9C}"
+          p:after="*[1=2]"
+          s:ds="local:/Data/Text 1"
+          s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B88B06ACA-2A19-44CC-98BC-24BE5A07407B%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="/headless-footer/footer-list-fifth-1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251114T062456Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "80e48829-2b04-419b-b2b5-52d6bde900f6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260129T044703Z

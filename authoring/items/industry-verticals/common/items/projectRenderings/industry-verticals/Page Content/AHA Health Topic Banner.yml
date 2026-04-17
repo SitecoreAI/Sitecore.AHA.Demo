@@ -1,4 +1,4 @@
----
+﻿---
 ID: "c0d1e2f3-a4b5-4c6d-7e8f-9a0b1c2d3e4f"
 Parent: "c8dc4bb6-bf94-4157-8ee6-c19cbfcb8a8a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -63,6 +63,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260127T140000Z
-    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-      Hint: __Display name
-      Value: AHA Health Topic Banner

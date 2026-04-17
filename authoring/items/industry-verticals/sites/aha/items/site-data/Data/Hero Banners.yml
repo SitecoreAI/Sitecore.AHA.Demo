@@ -1,0 +1,44 @@
+﻿---
+ID: "faa6d433-e25a-479c-a4af-a29658b3f937"
+Parent: "c78bd6ed-7500-43da-be3c-1f09be0e841d"
+Template: "38001de0-6d0b-4bc5-bf95-f616cfe0e281"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Hero Banners"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {AC18EEF2-F134-4985-8B74-6AD16CCA6577}
+    {38001DE0-6D0B-4BC5-BF95-F616CFE0E281}
+    {F8B2C3D4-E5F6-4A7B-9C0D-1E2F3A4B5C6D}
+    {A9C3D4E5-F6A7-4B8C-0D1E-2F3A4B5C6D7E}
+    {B3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B}
+    {A2E3F4A5-B6C7-4D8E-9F0A-1B2C3D4E5F6A}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c2e44114-265c-4238-a11a-893e90263e38"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251106T094630Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "45a7adee-8c7f-4cef-accf-8efef1f2644a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260131T144044Z

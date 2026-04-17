@@ -1,0 +1,52 @@
+﻿---
+ID: "efea80ed-f189-4516-bff1-3be049567598"
+Parent: "e13c2987-7ca9-408d-9e09-cc4f97d935bc"
+Template: "a2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Home/Health Topics/Cholesterol/Data/Cholesterol"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260131T155213Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "727d6bdf-4e36-4fe4-ae6e-470f27689fe4"
+    - ID: "a8e9f0a1-b2c3-4d4e-5f6a-7b8c9d0e1f2a"
+      Hint: Link
+      Value: |
+        <link linktype=\"external\" url=\"#\" text=\"Learn more about cholesterol\"/>
+    - ID: "b9f0a1b2-c3d4-4e5f-6a7b-8c9d0e1f2a3b"
+      Hint: Image
+      Value: |
+        <image mediaid="ab9a4fce-bae3-4cc7-9a2e-209684cc90d0" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d"
+      Hint: Title
+      Value: Cholesterol
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260131T160628Z
+    - ID: "e6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e"
+      Hint: Subtitle
+      Value: "What is Cholesterol?"
+    - ID: "f7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f"
+      Hint: Copy
+      Value: |
+        <div class="ck-content"><p>Cholesterol is a waxy substance found throughout the body. It's not <i>bad</i> unless you have too much of it. In fact, your body needs it to build cells. But too much cholesterol can pose a problem.</p></div>

@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b0e0595b-d511-4b69-8309-2acf256e53f2"
 Parent: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
 Template: "4d2b49e6-1130-444a-b22c-5c7e25d01b56"
@@ -9,7 +9,7 @@ SharedFields:
   Value: |
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
     {F6E44A9E-074A-4865-987E-0C2DC00B7AF5}
-    {412BF445-B1A6-4AFF-8054-0B21A1FEBc47}
+    {412BF445-B1A6-4AFF-8054-0B21A1FEBC47}
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "e3c24a6a-548e-423d-86d7-77e9bd60d5ec"

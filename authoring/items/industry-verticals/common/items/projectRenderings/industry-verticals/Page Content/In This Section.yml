@@ -1,4 +1,4 @@
----
+﻿---
 ID: "8a9b0c1d-2e3f-4a5b-6c7d-8e9f0a1b2c3d"
 Parent: "c8dc4bb6-bf94-4157-8ee6-c19cbfcb8a8a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
@@ -19,12 +19,12 @@ SharedFields:
 - ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
   Hint: __Read Only
   Value: 
-- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
-  Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']/*[@@templatename='In This Section Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='In This Section Folder']"
 - ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
   Hint: Parameters Template
   Value: "{91A2B3C4-D5E6-4F7A-8B9C-0D1E2F3A4B5C}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='In This Section Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='In This Section Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
   Value: 
@@ -57,6 +57,3 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20260127T130000Z
-    - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
-      Hint: __Display name
-      Value: In This Section

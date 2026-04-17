@@ -1,0 +1,60 @@
+﻿---
+ID: "3feb7bb4-5413-4387-8131-b4409648da1b"
+Parent: "faa6d433-e25a-479c-a4af-a29658b3f937"
+Template: "f8b2c3d4-e5f6-4a7b-9c0d-1e2f3a4b5c6d"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Hero Banners/Heart Disease Prevention"
+SharedFields:
+- ID: "a5c9d0e1-f2a3-4b4c-6d7e-8f90a1b2c3d4"
+  Hint: Image
+  Value: |
+    <image mediaid="776241f9-2972-41fa-9197-d60b2dea2093" />
+- ID: "b1a2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"
+  Hint: Logo
+  Value: |
+    <image mediaid="c90aa440-8df5-44f9-8ed5-0b5181fe57b9" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "a3fffcd2-0127-4227-8fd6-79e4181b82ca"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260204T212536Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d91986b4-6c69-4678-9b60-27157e52feb3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "c1e5f6a7-b8c9-4d0e-2f3a-4b5c6d7e8f90"
+      Hint: Title
+      Value: Protect Your Heart. Choose Prevention.
+    - ID: "d2f6a7b8-c9d0-4e1f-3a4b-5c6d7e8f90a1"
+      Hint: Copy
+      Value: |
+        <div class="ck-content"><p data-start="260" data-end="436">Heart disease is the leading cause of death—but much of it is preventable. Support research, education, and prevention programs that help people live longer, healthier lives.</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260205T165413Z
+    - ID: "e3a7b8c9-d0e1-4f2a-4b5c-6d7e8f90a1b2"
+      Hint: Button1
+      Value: |
+        <link linktype="external" url="#" target="" text="Get Heart-Healthy Tips" title="" class=""/>
+    - ID: "f4b8c9d0-e1f2-4a3b-5c6d-7e8f90a1b2c3"
+      Hint: Button2
+      Value: 

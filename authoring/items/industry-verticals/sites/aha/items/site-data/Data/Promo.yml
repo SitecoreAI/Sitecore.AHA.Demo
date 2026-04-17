@@ -1,0 +1,42 @@
+﻿---
+ID: "0969c2ba-c20c-45df-ba76-531ab77640d9"
+Parent: "c78bd6ed-7500-43da-be3c-1f09be0e841d"
+Template: "31135a36-23c2-469c-ba62-d742af0540f3"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Promo"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {08213AFB-9CB4-4C1F-A5DA-865B9A095601}
+    {31135A36-23C2-469C-BA62-D742AF0540F3}
+    {9A0B1C2D-3E4F-5A6B-7C8D-9E0F1A2B3C4D}
+    {3E4F5A6B-7C8D-9E0F-1A2B-3C4D5E6F7A8B}
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "069e345b-401c-4980-883d-5f236a68cba1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251106T112541Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a764ef4f-1fbf-4362-b6dd-c7c3fae1cce7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260130T193646Z

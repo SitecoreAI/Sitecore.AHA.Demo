@@ -1,0 +1,51 @@
+﻿---
+ID: "01363716-8896-48a3-981e-1f2e5ac9d886"
+Parent: "99a3f602-90a8-4b45-918d-bf2e513b8b7e"
+Template: "a2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Home/Health Topics/Sleep Disorders/Data/Sleep_Disorders"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260131T160620Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5fef7540-15d4-4b8c-b86f-f39369ac9098"
+    - ID: "a8e9f0a1-b2c3-4d4e-5f6a-7b8c9d0e1f2a"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="#" target="" text="Learn about sleep's important role in heart health" title="" class=""/>
+    - ID: "b9f0a1b2-c3d4-4e5f-6a7b-8c9d0e1f2a3b"
+      Hint: Image
+      Value: |
+        <image mediaid="fbf33f61-99d5-406d-a990-9f922f7609c7" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d"
+      Hint: Title
+      Value: Sleep Disorders
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260203T185906Z
+    - ID: "e6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e"
+      Hint: Subtitle
+      Value: Sleep and Heart Health
+    - ID: "f7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f"
+      Hint: Copy
+      Value: Getting enough quality sleep is an essential component of good heart and brain health. Sleep disorders have been linked to a higher risk of cardiovascular diseases.

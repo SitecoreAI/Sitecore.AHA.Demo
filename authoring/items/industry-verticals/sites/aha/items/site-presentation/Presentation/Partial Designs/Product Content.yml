@@ -1,0 +1,71 @@
+﻿---
+ID: "c359dc98-ae08-4a4c-bd05-c4c4952b6560"
+Parent: "9e7ecde0-5507-48d4-a726-12cb2ab96b80"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Presentation/Partial Designs/Product Content"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: "product-content"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{C999466D-A328-4986-9DE0-BB5A1A7E82C1}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "62064b9a-dda0-4fbc-a210-3cd950a38988"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{AC59DEC4-19D0-4BAD-BE0D-A040832F2825}"
+          p:before="*"
+          s:id="{7EEEB709-7AAA-4B2F-8FBA-88EF74B3D2FE}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;ShowCompareButton&amp;ShowAddtoCartButton=1&amp;ShowAddtoWishlistButton&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-main" />
+        <r
+          uid="{2BD49431-1C68-4555-9CD5-A8C69630F16A}"
+          p:after="r[@uid='{AC59DEC4-19D0-4BAD-BE0D-A040832F2825}']"
+          s:ds="122D2F66-A958-40D0-925B-838345851E04"
+          s:id="{3275D21A-F7AC-4682-9EBF-BEF6FEBBDDA8}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="headless-main" />
+        <r
+          uid="{037C2055-812B-4A3E-A9E9-7995EB29AE09}"
+          p:after="*[1=2]"
+          s:ds="F6140893-8669-445E-AADB-49F7905F688B"
+          s:id="{CCD11802-22A3-462F-92FC-821515E2AEC8}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B48B0B4D6-5333-47F7-B317-2DF6916C691F%7D&amp;Styles=%7C%7B237FCB1D-29EA-42F5-AF03-B9746C1E4E1E%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="headless-main" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251114T101406Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7d07f53f-4084-4ba7-89cf-4f6898951f25"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260203T192258Z

@@ -1,0 +1,78 @@
+﻿---
+ID: "a0840417-ad7d-45e4-996f-8ff431c38a19"
+Parent: "d86fa7f9-28ab-49d7-add6-a8cd01d86be4"
+Template: "8b7c6d5e-4f3a-4b2c-9d1e-0f8a7b6c5d4e"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/AHA Cards/Homepage Cards"
+SharedFields:
+- ID: "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
+  Hint: Icon2
+  Value: |
+    <image mediaid="b760cb46-3454-44e5-925a-84280e46b3a1" />
+- ID: "b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e"
+  Hint: Icon3
+  Value: |
+    <image mediaid="c90aa440-8df5-44f9-8ed5-0b5181fe57b9" />
+- ID: "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f"
+  Hint: Icon4
+  Value: |
+    <image mediaid="24674e48-2c41-4350-a08f-37958d0ab1d7" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d56ec11c-545c-407b-9ea3-f287f5303bcf"
+- ID: "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c"
+  Hint: Icon1
+  Value: |
+    <image mediaid="eaad0718-8780-4443-8f82-cd1f48a6eaba" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260202T032522Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "11e895ad-c32f-47bc-b5a4-f09725ea19ba"
+    - ID: "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d"
+      Hint: Title4
+      Value: Volunteer Opportunities
+    - ID: "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e"
+      Hint: Copy1
+      Value: "Be prepared for an emergency: Learn CPR. Save a life."
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f"
+      Hint: Copy2
+      Value: Join our online community of patients, survivors, and caregivers.
+    - ID: "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      Hint: Title1
+      Value: CPR and ECC Training
+    - ID: "d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a"
+      Hint: Copy3
+      Value: Build your professional career and start making an impact today.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260203T190047Z
+    - ID: "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b"
+      Hint: Title2
+      Value: Support Network Community
+    - ID: "e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b"
+      Hint: Copy4
+      Value: Help us create a healthier world free of heart disease and stroke.
+    - ID: "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c"
+      Hint: Title3
+      Value: Professional Membership

@@ -1,0 +1,49 @@
+﻿---
+ID: "01c31190-5819-4ee9-b1e3-ad8c9e823d68"
+Parent: "0969c2ba-c20c-45df-ba76-531ab77640d9"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Promo/Global Promo"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/78645-HomepagePromoCTAs-1100x740?v=197a5415" dam-id="MZ0weyqdT_-Zn_U75ag1IA" width="1100" height="740" alt="Promo Image.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/78645/thumbnail" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d78f17d1-b577-4847-9ea2-bc0ba3c64c6f"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251106T112551Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link class="" querystring="" id="5ED3BAFC-FD0C-4B15-B83E-30CB58D959C3" anchor="" target="" title="" linktype="internal" text="Explore More" url="/industry-verticals/essential-living/Home/Inspiration" />
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: <p>A sofa designed for slow living where clean lines meet deep comfort. Crafted with timeless elegance and natural materials, it&rsquo;s more than seating; it&rsquo;s your new sanctuary.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7458fa56-76b0-4982-9712-00be1b5baae8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260128T151330Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Introducing the essence of nordic comfort

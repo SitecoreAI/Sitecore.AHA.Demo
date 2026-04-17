@@ -1,0 +1,42 @@
+﻿---
+ID: "bb2b8ecb-f155-43c2-84b8-1ec0245535e0"
+Parent: "0b961b08-b738-4a02-a814-b57e26aa24c9"
+Template: "0cb3fc95-fea8-40eb-9560-158e7d92a3a4"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Selected Products/Most Popular Lighting"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251117T133016Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "53d0df0a-b9c3-4a83-9150-37c68259f6ab"
+      Hint: Title
+      Value: Most popular right now
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sanduni.galagoda@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cdc26632-82aa-4f3b-8401-c99c6b4f3969"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "c3fb8c52-2f64-45bc-9970-ea340d7271fa"
+      Hint: ProductsList
+      Value: |
+        {4BB5EE28-95F9-4E4E-841D-5764C865BC5A}
+        {C526AC9E-9D81-48C1-A7F4-FD4F92791027}
+        {AE36D31A-31FC-422E-B8E8-2F563A337D2E}
+        {44C3C26E-A9E7-41C8-9AF7-A24A7F9A2BB2}
+        {F80B06DD-BF2D-4E04-A68B-2D1705400F50}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260128T151332Z

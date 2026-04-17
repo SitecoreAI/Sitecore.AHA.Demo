@@ -1,0 +1,53 @@
+﻿---
+ID: "1e408236-dd62-468c-a35a-d43461296975"
+Parent: "0969c2ba-c20c-45df-ba76-531ab77640d9"
+Template: "08213afb-9cb4-4c1f-a5da-865b9a095601"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Promo/Wear Red Day"
+SharedFields:
+- ID: "b441a09f-ddb2-41a8-84cc-2533686541f4"
+  Hint: PromoImageOne
+  Value: |
+    <image mediaid="a1f0a9e2-730d-4e76-9329-8d3dffde28c5" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1fd61be4-6851-4394-89e8-7b6c65077dab"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260130T232258Z
+    - ID: "453ed40c-5232-4e90-b023-7a3cee2bcfe8"
+      Hint: PromoMoreInfo
+      Value: |
+        <link linktype="external" url="#" target="" text="Shop Go Red for Women" title="" class=""/>
+    - ID: "4fc0c7b3-bcfb-4a9d-834d-59f6836e5fd6"
+      Hint: PromoDescription
+      Value: |
+        <div class="ck-content"><p>Shop the 2026 Go Red for Women Collection and grab the hottest styles, pins and gifts you need to Go Red and show your support for women’s heart health. Every purchase supports our lifesaving mission.<br />&nbsp;</p></div>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab50ee19-ca84-4952-8557-6d198663bf4f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260203T190052Z
+    - ID: "f7e3056b-5e6e-4080-b2b7-84f76b2052fc"
+      Hint: PromoTitle
+      Value: Get ready for National Wear Red Day® on Feb. 6 

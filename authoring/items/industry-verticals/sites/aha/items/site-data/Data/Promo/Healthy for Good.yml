@@ -1,0 +1,42 @@
+﻿---
+ID: "394a5b3d-cc6b-4aac-b1b5-d98d7a82496b"
+Parent: "0969c2ba-c20c-45df-ba76-531ab77640d9"
+Template: "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Promo/Healthy for Good"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f"
+      Hint: PromoText
+      Value: |
+        <div class="ck-content"><p>Join the movement in getting <em>Healthy for Good</em>™ today. Because when good health is lived, it can nourish every part of you, your family, and your community for a lifetime.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260130T193756Z
+    - ID: "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7a"
+      Hint: PromoButton
+      Value: |
+        <link linktype="external" url="#" target="" text="Sign up for bimonthly hacks &amp; tips" title="" class=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eebc4275-14b7-40e2-9210-3a60ef1d7135"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260130T193845Z

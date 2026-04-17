@@ -1,4 +1,4 @@
----
+﻿---
 ID: "2a3b4c5d-6e7f-4a8b-9c0d-1e2f3a4b5c6d"
 Parent: "b3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
 Template: "b3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
@@ -9,7 +9,7 @@ SharedFields:
   Value: Office/32x32/note_text.png
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
-  Value: "{a2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a}"
+  Value: "{A2E3F4A5-B6C7-4D8E-9F0A-1B2C3D4E5F6A}"
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
   Value: "00000000-0000-0000-0000-000000000038"

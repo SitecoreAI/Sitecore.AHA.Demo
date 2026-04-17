@@ -1,0 +1,123 @@
+﻿---
+ID: "29dfe6ca-a26b-4672-ba3c-472b498622e1"
+Parent: "9e7ecde0-5507-48d4-a726-12cb2ab96b80"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Presentation/Partial Designs/Header"
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{CB326E2C-BFE0-4F57-AAB9-1DB56824B531}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "117e5e8f-51f6-419f-8a44-bc0039bd2804"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{A29CDBA7-2CD3-40A5-9376-9BCCFB860884}"
+          p:before="*"
+          s:id="{32138D34-7434-4CD1-BF7F-64DA1CEB8F33}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header" />
+        <r
+          uid="{A573A719-E1B9-4190-AE58-D37533101B43}"
+          p:after="r[@uid='{A29CDBA7-2CD3-40A5-9376-9BCCFB860884}']"
+          s:ds="9F205E97-8942-4F5C-9511-ED5BC4E70F1C"
+          s:id="{95A4BE1D-049A-40E1-A9E8-9D90AEA233E7}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
+          s:ph="headless-header" />
+        <r
+          uid="{56F6D469-A530-4887-A4E4-C7EB374BE52B}"
+          p:after="r[@uid='{A573A719-E1B9-4190-AE58-D37533101B43}']"
+          s:ds="local:/Data/Image 1"
+          s:id="{AB2EDBA0-3960-4F12-B765-579DC231894A}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B8758F7BD-02E4-430B-AE05-99A514DB82F2%7D&amp;Styles=%7C%7B0D251C66-73EC-4904-B6AA-D2ECFE709E20%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+          s:ph="/headless-header/header-left-1" />
+        <r
+          uid="{74936B73-C7C3-4A78-B268-404AE6D95631}"
+          p:after="r[@uid='{56F6D469-A530-4887-A4E4-C7EB374BE52B}']"
+          s:id="{6C0D91D1-A92F-41BD-949B-423811202101}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+          s:ph="/headless-header/header-left-1" />
+        <r
+          uid="{6C590839-1559-4BF4-862F-3A0648E672DD}"
+          p:after="r[@uid='{74936B73-C7C3-4A78-B268-404AE6D95631}']"
+          s:ds="BEBA2DCA-8ACE-44D5-AD8F-0720F3B177AF"
+          s:id="{C56EFAE9-39E8-45EB-8B59-D4BF2B71914E}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;HideAccountIcon&amp;HideWishlistIcon=1&amp;HideCartIcon&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="/headless-header/header-right-1" />
+        <r
+          uid="{8C7FB294-595D-47D0-A771-3D906945346F}"
+          p:after="r[@uid='{6C590839-1559-4BF4-862F-3A0648E672DD}']"
+          s:id="{9F65621E-1102-461C-BBEE-3FADCE8E0509}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B5CF90734-FF7F-4888-94A0-41E25731043D%7D&amp;Styles&amp;NavigationRoot&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter=%7BD063E9D1-C7B5-4B1E-B31E-69886C9C59F5%7D&amp;Flattened&amp;AddRoot&amp;SerializerFieldNames&amp;SimpleLayout&amp;Logo=%3Cimage%20mediaid%3D%22530F252D-685D-41EC-91DD-B0C0CDEE6D51%22%20%2F%3E&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="/headless-header/header-nav-1" />
+        <r
+          uid="{C33F6E19-23F6-4837-84CE-032A751B0E8D}"
+          p:after="*[1=2]"
+          s:ds="2A4620C5-BF6D-4565-A4BD-3337DCB4649F"
+          s:id="{4956263D-1195-4D6E-931B-800EA625FF6F}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0EA08179-D11A-4EB8-98F4-8370E91E7131%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="/headless-header/header-nav-1" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{74936B73-C7C3-4A78-B268-404AE6D95631}">
+              <p:d />
+            </r>
+            <r
+              uid="{6C590839-1559-4BF4-862F-3A0648E672DD}">
+              <p:d />
+            </r>
+            <r
+              uid="{5FC087C8-3190-44DB-8A29-555C124242F5}"
+              p:after="*[1=2]"
+              s:id="{6C0D91D1-A92F-41BD-949B-423811202101}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
+              s:ph="/headless-header/header-right-1" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251111T121818Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\neli.kostadinova@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c1905fe-79cb-45a1-ad0e-263a27651101"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260129T010459Z

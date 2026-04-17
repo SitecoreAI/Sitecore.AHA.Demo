@@ -1,0 +1,58 @@
+﻿---
+ID: "cb0d723b-ac61-4ea0-9f74-556638e03bac"
+Parent: "3c29a89b-af32-479c-9998-a96c7d6f069a"
+Template: "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/In This Sections/Healthy Lifestyle"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b"
+      Hint: Topic1
+      Value: Stress Management
+    - ID: "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4a5b6c"
+      Hint: Topic2
+      Value: Mental Health and Wellbeing
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260131T001958Z
+    - ID: "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
+      Hint: Topic3
+      Value: Sleep
+    - ID: "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e"
+      Hint: Image1
+      Value: |
+        <image mediaid="196b5e55-8b6a-48be-8eae-fe7cab90dfb6" />
+    - ID: "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f"
+      Hint: Image2
+      Value: |
+        <image mediaid="881c250c-102c-4295-b03c-a2e9dedbd6a1" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a"
+      Hint: Image3
+      Value: |
+        <image mediaid="f2993d97-5967-4533-bd4b-52ded7d03f5f" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "870fa7f8-cf6d-4383-8bcb-573cb3277d85"
+    - ID: "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4a"
+      Hint: Title
+      Value: In this Section
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260203T185837Z

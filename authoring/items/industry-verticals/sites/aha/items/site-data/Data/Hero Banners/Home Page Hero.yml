@@ -1,0 +1,61 @@
+﻿---
+ID: "f278b535-f84b-45c4-a779-301148593232"
+Parent: "faa6d433-e25a-479c-a4af-a29658b3f937"
+Template: "f8b2c3d4-e5f6-4a7b-9c0d-1e2f3a4b5c6d"
+Path: "/sitecore/content/industry-verticals/american-heart-association/Data/Hero Banners/Home Page Hero"
+SharedFields:
+- ID: "a5c9d0e1-f2a3-4b4c-6d7e-8f90a1b2c3d4"
+  Hint: Image
+  Value: |
+    <image mediaid="9f04a375-265a-4875-bac1-cbbcecacf829" />
+- ID: "b1a2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"
+  Hint: Logo
+  Value: |
+    <image mediaid="c90aa440-8df5-44f9-8ed5-0b5181fe57b9" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "c292823d-9ff0-4b3d-8593-38ccc6f691ec"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260128T234319Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9915ba91-15f3-49c4-9556-60f59ee285e3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thomas.lin@sitecore.com
+    - ID: "c1e5f6a7-b8c9-4d0e-2f3a-4b5c6d7e8f90"
+      Hint: Title
+      Value: 3X Impact for Wear Red and Give Day 
+    - ID: "d2f6a7b8-c9d0-4e1f-3a4b-5c6d7e8f90a1"
+      Hint: Copy
+      Value: |
+        <div class="ck-content"><p>Give by February 6 for 3X impact and join a nation supporting women's heart health.</p></div>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260129T002554Z
+    - ID: "e3a7b8c9-d0e1-4f2a-4b5c-6d7e8f90a1b2"
+      Hint: Button1
+      Value: |
+        <link linktype="external" url="#" target="" text="Donate Once" title="" class=""/>
+    - ID: "f4b8c9d0-e1f2-4a3b-5c6d-7e8f90a1b2c3"
+      Hint: Button2
+      Value: |
+        <link linktype="external" url="#" target="" text="Donate Monthly" title="" class=""/>
