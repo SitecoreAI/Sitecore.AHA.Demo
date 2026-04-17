@@ -17,8 +17,7 @@
     "removeOrphansForRoles": true,
     "removeOrphansForUsers": true,
     "continueOnItemFailure": false,
-    "excludedFields": [],
-    "progressiveMetadataPull": false
+    "excludedFields": []
   },
   "settings": {
     "telemetryEnabled": false,

@@ -52,15 +52,7 @@
   "postActions": {
     "actions": {
       "scsModules": {
-        "modules": [
-          "Project.IndustryVerticals",
-          "Project.Retail-Content",
-          "Project.Retail-Media",
-          "Project.Healthcare-Content",
-          "Project.Healthcare-Media",
-          "Project.Travel-Media",
-          "Project.Travel-Content"
-        ]
+        "modules": ["Project.AHA-Content"]
       },
       "warmUpCm": {
         "urls": [
